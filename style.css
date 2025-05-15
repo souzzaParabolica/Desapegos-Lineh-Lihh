@@ -269,3 +269,7 @@ button:active {
         font-size: 50px;
     }
 }
+
+.logo-desapegos{
+    z-index: 10;
+}
