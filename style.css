@@ -770,10 +770,6 @@ ul,
     z-index: 11;
 }
 
-.esferas1,
-.esferas2 {
-    transform: rotate(90deg);
-}
 
 .mola,
 .mola2,
@@ -785,11 +781,14 @@ ul,
 @media (max-width: 767px) {
 
     .mola,
-    .mola2,
-    .esferas1,
-    .esferas2 {
+    .mola2 {
         width: 120px !important;
         height: 120px !important;
+    }
+
+    .esferas1, .esferas2 {
+        width: 220px !important;
+        height: 220px !important;
     }
 
     /* Posicionamento diferente para mobile */
@@ -807,16 +806,14 @@ ul,
     }
 
     .esferas1 {
-        left: -20% !important;
-        top: 70% !important;
-        transform: rotate(90deg) scale(0.7);
-        z-index: 11;
+        left: -30% !important;
+        top: 63% !important;
+        transform: scale(0.7) rotate(-30deg);
     }
 
     .esferas2 {
-        left: 82% !important;
-        top: 70% !important;
-        transform: rotate(90deg) scale(0.7);
-        z-index: 11;
+        left: 50% !important;
+        top: 75% !important;
+        transform: scale(0.7) rotate(15deg);
     }
 }

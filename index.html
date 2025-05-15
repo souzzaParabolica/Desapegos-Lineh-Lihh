@@ -345,12 +345,12 @@
         />
         <img
           class="esferas1 absolute w-[200px] top-[50%] right-[-18%]"
-          src="img/Spheres 3.png"
+          src="img/Cone.png"
           alt=""
         />
         <img
           class="esferas2 absolute w-[200px] top-[50%] left-[-18%]"
-          src="img/Spheres 3.png"
+          src="img/Pyramid 1.png"
           alt=""
         />
 
@@ -700,16 +700,29 @@
           });
 
           // Animação das esferas (mobile)
-          gsap.from([".esferas1", ".esferas2"], {
-            y: -40, // Distância menor
+          gsap.from(".esferas1", {
+            y: -100, // Distância menor
             opacity: 0,
             duration: 0.8,
             scrollTrigger: {
               trigger: ".button-acess2",
-              start: "top 23%",
+              start: "top 33%",
               end: "top -30%",
               scrub: 1,
               markers: false,
+            },
+          });
+
+          gsap.from(".esferas2", {
+            y: -40, // Distância menor
+            opacity: 0,
+            duration: 0.8,
+            scrollTrigger: {
+              trigger: ".button-acess3",
+              start: "top 90%",
+              end: "top 30%",
+              scrub: 1,
+              markers: true,
             },
           });
         } else {
