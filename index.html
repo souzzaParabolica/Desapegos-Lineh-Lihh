@@ -331,7 +331,8 @@
       </div>
 
       <div
-        class="relative w-screen max-w-[75%] flex flex-col justify-center items-center mx-auto"
+        class="relative w-screen max-w-[75%] flex flex-col justify-between items-center mx-auto flex-wrap"
+        s
       >
         <img
           class="mola absolute w-[280px] top-[25%] left-[%]"
@@ -339,17 +340,17 @@
           alt=""
         />
         <img
-          class="mola2 absolute w-[280px] top-[70%] right-[29%]"
+          class="mola2 absolute w-[280px] top-[78%] right-[-10%]"
           src="img/Helix.png"
           alt=""
         />
         <img
-          class="esferas1 absolute w-[200px] top-[50%] right-[-18%]"
+          class="esferas1 absolute w-[300px] top-[45%] right-[-5%]"
           src="img/Cone.png"
           alt=""
         />
         <img
-          class="esferas2 absolute w-[200px] top-[50%] left-[-18%]"
+          class="esferas2 absolute w-[350px] top-[55%] left-[-15%]"
           src="img/Pyramid 1.png"
           alt=""
         />
@@ -361,14 +362,18 @@
         </h2>
 
         <div
-          class="acessorios flex flex-row justify-between items-center flex-wrap px-4 gap-5"
+          class="acessorios flex flex-row justify-evenly items-center flex-wrap px-4"
         >
           <div
-            class="primeira-div acessorio bg-[#7B2E5D] flex flex-col p-5 rounded-xl gap-5 items-center mt-5"
+            class="primeira-div acessorio bg-[#7B2E5D] flex flex-col p-5 rounded-xl gap-5 items-center mt-5 text-center"
           >
             <img src="img/Acessorios1.jpg" alt="" width="300px" />
             <p class="desc-produto max-w-[300px] cursor-default">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              Bolsa de mão Melissa & Mickey
+              <br />
+              <span class="font-bold"> NOVA</span>
+              <br />
+              <span class="font-bold mt-5">R$130,00</span>
             </p>
 
             <button class="button-acess1">
@@ -757,12 +762,13 @@
             y: -60,
             opacity: 0,
             duration: 1,
+            stagger: 0.5, // Delay de 0.3s entre .esferas1 e .esferas2
             scrollTrigger: {
               trigger: ".button-acess2",
-              start: "top 80%",
-              end: "top 50%",
-              scrub: 1,
-              markers: false,
+              start: "top 80%", // Inicia quando o botão está a 80% da viewport
+              end: "top 50%", // Termina quando chega a 50%
+              scrub: 1, // Animação ligada ao scroll (suave)
+              markers: false, // Remove os marcadores de debug
             },
           });
         }

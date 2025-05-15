@@ -768,10 +768,17 @@ ul,
 }
 
 .mola2 {
-    transform: rotate(-45deg);
+    transform: rotate(15deg);
     z-index: 11;
 }
 
+.esferas1{
+    transform: rotate(45deg);
+}
+
+.esferas2{
+    transform: rotate(-42deg);
+}   
 
 .mola,
 .mola2,
