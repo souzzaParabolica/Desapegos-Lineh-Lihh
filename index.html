@@ -21,6 +21,8 @@
           }
         });
     </script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
     <meta charset="UTF-8" />
@@ -105,6 +107,11 @@
     </header>
 
     <main>
+      <a href="#">
+        <button class="btn">
+          <i data-lucide="arrow-up" class="icon cursor-pointer"></i></button
+      ></a>
+
       <label class="switch">
         <input id="input" type="checkbox" checked="darkTheme" />
         <div class="slider round">
@@ -650,119 +657,118 @@
       });
 
       document.addEventListener("DOMContentLoaded", () => {
-    gsap.registerPlugin(ScrollTrigger);
-    
-    // Detecta se é mobile
-    const isMobile = window.innerWidth < 768;
-    
-    // Configurações específicas para mobile
-    if (isMobile) {
-        // Redefine as posições e tamanhos para mobile
-        gsap.set([".mola", ".mola2", ".esferas1", ".esferas2"], {
+        gsap.registerPlugin(ScrollTrigger);
+
+        // Detecta se é mobile
+        const isMobile = window.innerWidth < 768;
+
+        // Configurações específicas para mobile
+        if (isMobile) {
+          // Redefine as posições e tamanhos para mobile
+          gsap.set([".mola", ".mola2", ".esferas1", ".esferas2"], {
             width: 60, // Tamanho reduzido para mobile
-            height: 60
-        });
-        
-        // Animação da mola (mobile)
-        gsap.from(".mola", {
+            height: 60,
+          });
+
+          // Animação da mola (mobile)
+          gsap.from(".mola", {
             y: 50, // Distância menor
             x: -30, // Vem levemente da esquerda
             opacity: 0,
             duration: 0.8,
             scrollTrigger: {
-                trigger: ".acessorios",
-                start: "top 90%",
-                end: "top 100%",
-                scrub: 1,
-                markers: false
-            }
-        });
-        
-        // Animação da mola2 (mobile)
-        gsap.from(".mola2", {
+              trigger: ".acessorios",
+              start: "top 90%",
+              end: "top 100%",
+              scrub: 1,
+              markers: false,
+            },
+          });
+
+          // Animação da mola2 (mobile)
+          gsap.from(".mola2", {
             y: -30, // Distância menor
             opacity: 0,
             duration: 0.8,
             scrollTrigger: {
-                trigger: ".segunda-div",
-                start: "top 85%",
-                end: "top 50%",
-                scrub: 1,
-                markers: false
-            }
-        });
-        
-        // Animação das esferas (mobile)
-        gsap.from([".esferas1", ".esferas2"], {
+              trigger: ".segunda-div",
+              start: "top 85%",
+              end: "top 50%",
+              scrub: 1,
+              markers: false,
+            },
+          });
+
+          // Animação das esferas (mobile)
+          gsap.from([".esferas1", ".esferas2"], {
             y: -40, // Distância menor
             opacity: 0,
             duration: 0.8,
             scrollTrigger: {
-                trigger: ".button-acess2",
-                start: "top 90%",
-                end: "top 50%",
-                scrub: 1,
-                markers: false
-            }
-        });
-        
-    } else {
-        // Configurações para desktop (original)
-        gsap.from(".mola", {
+              trigger: ".button-acess2",
+              start: "top 90%",
+              end: "top 50%",
+              scrub: 1,
+              markers: false,
+            },
+          });
+        } else {
+          // Configurações para desktop (original)
+          gsap.from(".mola", {
             y: 100,
             opacity: 0,
             duration: 1,
             scrollTrigger: {
-                trigger: ".acessorios",
-                start: "top 80%",
-                end: "top 20%",
-                scrub: 1,
-                markers: false
-            }
-        });
-        
-        gsap.from(".mola2", {
+              trigger: ".acessorios",
+              start: "top 80%",
+              end: "top 20%",
+              scrub: 1,
+              markers: false,
+            },
+          });
+
+          gsap.from(".mola2", {
             y: -50,
             opacity: 0,
             duration: 1,
             scrollTrigger: {
-                trigger: ".terceira-div",
-                start: "top 80%",
-                end: "top 15%",
-                scrub: 1,
-                markers: false
-            }
-        });
-        
-        gsap.from([".esferas1", ".esferas2"], {
+              trigger: ".terceira-div",
+              start: "top 80%",
+              end: "top 15%",
+              scrub: 1,
+              markers: false,
+            },
+          });
+
+          gsap.from([".esferas1", ".esferas2"], {
             y: -60,
             opacity: 0,
             duration: 1,
             scrollTrigger: {
-                trigger: ".button-acess2",
-                start: "top 80%",
-                end: "top 50%",
-                scrub: 1,
-                markers: false
-            }
-        });
-    }
-    
-    // Animação dos acessórios (igual para ambos)
-    gsap.from(".acessorio", {
-        opacity: 0,
-        y: isMobile ? 10 : 20, // Distância menor em mobile
-        duration: 0.8,
-        stagger: 0.2,
-        scrollTrigger: {
+              trigger: ".button-acess2",
+              start: "top 80%",
+              end: "top 50%",
+              scrub: 1,
+              markers: false,
+            },
+          });
+        }
+
+        // Animação dos acessórios (igual para ambos)
+        gsap.from(".acessorio", {
+          opacity: 0,
+          y: isMobile ? 10 : 20, // Distância menor em mobile
+          duration: 0.8,
+          stagger: 0.2,
+          scrollTrigger: {
             trigger: ".acessorios",
             start: "top 90%",
             end: "top 70%",
             scrub: 1,
-            markers: false
-        }
-    });
-});
+            markers: false,
+          },
+        });
+      });
     </script>
 
     <script src="script.js"></script>
@@ -772,6 +778,10 @@
         const menu = document.getElementById("mobile-menu");
         menu.classList.toggle("hidden");
       }
+    </script>
+
+    <script>
+      lucide.createIcons();
     </script>
   </body>
 </html>

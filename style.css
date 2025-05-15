@@ -21,6 +21,7 @@
 body {
     overflow-x: hidden;
     background-color: var(--bg-color);
+    scroll-behavior: smooth;
 }
 
 /* Suavidade no background e nas cores */
@@ -47,6 +48,46 @@ ul,
 
 .menu-button {
     color: var(--menu-button-color);
+}
+
+.btn {
+    transition: all 0.3s ease-in-out;
+    font-family: "Dosis", sans-serif;
+}
+
+.btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background-image: linear-gradient(135deg, #feb692 0%, #ea5455 100%);
+    box-shadow: 0 20px 30px -6px rgba(238, 103, 97, 0.5);
+    outline: none;
+    cursor: pointer;
+    border: 1px solid white;
+    font-size: 15px;
+    color: white;
+    position: fixed;
+    bottom: 80px;
+    right: 20px;
+    z-index: 99;
+}
+
+.btn:hover {
+    transform: translateY(3px);
+    box-shadow: none;
+}
+
+.btn:active {
+    opacity: 0.5;
+}
+
+.icon {
+    display: block;
+    width: 30px;
+    height: 30px;
 }
 
 .switch {
@@ -407,7 +448,13 @@ ul,
     transform: translateY(-2px);
 }
 
-button {
+.button-acess1,
+.button-acess2,
+.button-acess3,
+.button-acess4,
+.button-prod1,
+.button-prod2,
+.button-prod3 {
     cursor: pointer;
     font-weight: 700;
     transition: all 0.2s;
