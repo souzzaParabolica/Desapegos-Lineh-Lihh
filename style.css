@@ -6,6 +6,8 @@
     --hero-color: linear-gradient(to bottom, #eaeaea, white);
     --secondary-bg-color: #eaeaea;
     --menu-button-color: #000;
+    --border-button: 1px solid #000;
+
 
 }
 
@@ -15,13 +17,13 @@
     --secondary-bg-color: #2d3748;
     --hero-color: linear-gradient(to bottom, #2d3748, #121212);
     --menu-button-color: white;
+    --border-button: 1px solid #ffffff;
 
 }
 
 body {
     overflow-x: hidden;
     background-color: var(--bg-color);
-    scroll-behavior: smooth;
 }
 
 /* Suavidade no background e nas cores */
@@ -66,8 +68,8 @@ ul,
     box-shadow: 0 20px 30px -6px rgba(238, 103, 97, 0.5);
     outline: none;
     cursor: pointer;
-    border: 1px solid white;
     font-size: 15px;
+    border: var(--border-button);
     color: white;
     position: fixed;
     bottom: 80px;
@@ -786,7 +788,8 @@ ul,
         height: 120px !important;
     }
 
-    .esferas1, .esferas2 {
+    .esferas1,
+    .esferas2 {
         width: 220px !important;
         height: 220px !important;
     }
