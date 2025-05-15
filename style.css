@@ -798,13 +798,13 @@ ul,
 
     .esferas1 {
         left: -25% !important;
-        top: 75% !important;
+        top: 69% !important;
         transform: rotate(90deg) scale(0.7);
     }
 
     .esferas2 {
         left: 85% !important;
-        top: 75% !important;
+        top: 69% !important;
         transform: rotate(90deg) scale(0.7);
     }
 }
