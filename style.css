@@ -526,6 +526,7 @@ ul,
     overflow: hidden;
 }
 
+
 .banner img:first-child {
     max-width: 200px;
     margin-bottom: 30px;
@@ -806,14 +807,16 @@ ul,
     }
 
     .esferas1 {
-        left: -26% !important;
-        top: 69% !important;
+        left: -20% !important;
+        top: 70% !important;
         transform: rotate(90deg) scale(0.7);
+        z-index: 11;
     }
 
     .esferas2 {
-        left: 85% !important;
-        top: 69% !important;
+        left: 82% !important;
+        top: 70% !important;
         transform: rotate(90deg) scale(0.7);
+        z-index: 11;
     }
 }

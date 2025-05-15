@@ -772,67 +772,72 @@
     </script>
 
     <script>
-      document.addEventListener("DOMContentLoaded", function() {
-    // 1. Inicializa os ícones Lucide (se estiver usando)
-    if(typeof lucide !== 'undefined') {
-        lucide.createIcons();
-    }
-
-    // 2. Configuração inicial - esconde o botão
-    const btn = document.querySelector('.btn');
-    btn.style.opacity = '0';
-    btn.style.pointerEvents = 'none'; // Impede cliques quando invisível
-    btn.style.transform = 'translateY(20px)';
-
-    // 3. Controle de visibilidade baseado no scroll
-    window.addEventListener('scroll', function() {
-        if (window.scrollY > 300) { // Aparece após rolar 300px
-            btn.style.opacity = '1';
-            btn.style.pointerEvents = 'auto';
-            btn.style.transform = 'translateY(0)';
-            btn.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
-        } else { // Esconde quando perto do topo
-            btn.style.opacity = '0';
-            btn.style.pointerEvents = 'none';
-            btn.style.transform = 'translateY(20px)';
+      document.addEventListener("DOMContentLoaded", function () {
+        // 1. Inicializa os ícones Lucide (se estiver usando)
+        if (typeof lucide !== "undefined") {
+          lucide.createIcons();
         }
-    });
 
-    // 4. Animação suave ao clicar
-    btn.addEventListener('click', function(e) {
-        e.preventDefault();
-        
-        // Desativa o botão durante a animação
-        btn.style.pointerEvents = 'none';
-        
-        // Animação de scroll suave
-        const startPosition = window.pageYOffset;
-        const distance = -startPosition;
-        const duration = 1000; // 1 segundo
-        let start = null;
-        
-        function step(timestamp) {
+        // 2. Configuração inicial - esconde o botão
+        const btn = document.querySelector(".btn");
+        btn.style.opacity = "0";
+        btn.style.pointerEvents = "none"; // Impede cliques quando invisível
+        btn.style.transform = "translateY(20px)";
+
+        // 3. Controle de visibilidade baseado no scroll
+        window.addEventListener("scroll", function () {
+          if (window.scrollY > 300) {
+            // Aparece após rolar 300px
+            btn.style.opacity = "1";
+            btn.style.pointerEvents = "auto";
+            btn.style.transform = "translateY(0)";
+            btn.style.transition = "opacity 0.5s ease, transform 0.5s ease";
+          } else {
+            // Esconde quando perto do topo
+            btn.style.opacity = "0";
+            btn.style.pointerEvents = "none";
+            btn.style.transform = "translateY(20px)";
+          }
+        });
+
+        // 4. Animação suave ao clicar
+        btn.addEventListener("click", function (e) {
+          e.preventDefault();
+
+          // Desativa o botão durante a animação
+          btn.style.pointerEvents = "none";
+
+          // Animação de scroll suave
+          const startPosition = window.pageYOffset;
+          const distance = -startPosition;
+          const duration = 1000; // 1 segundo
+          let start = null;
+
+          function step(timestamp) {
             if (!start) start = timestamp;
             const progress = timestamp - start;
-            window.scrollTo(0, easeInOutCubic(progress, startPosition, distance, duration));
+            window.scrollTo(
+              0,
+              easeInOutCubic(progress, startPosition, distance, duration)
+            );
             if (progress < duration) {
-                window.requestAnimationFrame(step);
+              window.requestAnimationFrame(step);
             } else {
-                btn.style.pointerEvents = 'auto'; // Reativa após animação
+              btn.style.pointerEvents = "auto"; // Reativa após animação
             }
-        }
-        
-        // Função de easing para suavizar
-        function easeInOutCubic(t, b, c, d) {
-            t /= d/2;
-            if (t < 1) return c/2*t*t*t + b;
+          }
+
+          // Função de easing para suavizar
+          function easeInOutCubic(t, b, c, d) {
+            t /= d / 2;
+            if (t < 1) return (c / 2) * t * t * t + b;
             t -= 2;
-            return c/2*(t*t*t + 2) + b;
-        }
-        
-        window.requestAnimationFrame(step);
-    });
-});
+            return (c / 2) * (t * t * t + 2) + b;
+          }
+
+          window.requestAnimationFrame(step);
+        });
+      });
     </script>
 
     <script src="script.js"></script>
