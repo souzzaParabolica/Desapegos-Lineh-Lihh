@@ -106,7 +106,7 @@ button {
     /* width: 60%; */
 }
 
-button>svg {
+.button-prod1>svg, .button-prod2>svg, .button-prod3>svg {
     width: 34px;
     margin-left: 10px;
     transition: transform 0.3s ease-in-out;
@@ -132,7 +132,7 @@ button:hover>svg {
 }
 
 button:active {
-    transform: scale(0.95) !important;
+    transform: scale(0.95);
 }
 
 .button-prod1 {
