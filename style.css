@@ -38,6 +38,7 @@ nav {
 .produto {
     align-items: center;
     margin-top: 50px;
+    cursor: pointer;
 
     transition: all 0.3s ease-in-out;
 
