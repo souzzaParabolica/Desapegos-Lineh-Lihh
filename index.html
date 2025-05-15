@@ -105,15 +105,6 @@
     </header>
 
     <main>
-      <a href="#">
-        <button class="back-to-top">
-          <svg class="svgIcon" viewBox="0 0 384 512">
-            <path
-              d="M214.6 41.4c-12.5-12.5-32.8-12.5-45.3 0l-160 160c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L160 141.2V448c0 17.7 14.3 32 32 32s32-14.3 32-32V141.2L329.4 246.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3l-160-160z"
-            ></path>
-          </svg></button
-      ></a>
-
       <label class="switch">
         <input id="input" type="checkbox" checked="darkTheme" />
         <div class="slider round">
@@ -333,26 +324,44 @@
       </div>
 
       <div
-        class="w-screen max-w-[75%] flex flex-col justify-center items-center mx-auto"
+        class="relative w-screen max-w-[75%] flex flex-col justify-center items-center mx-auto"
       >
+        <img
+          class="mola absolute w-[280px] top-[25%] left-[%]"
+          src="img/Helix.png"
+          alt=""
+        />
+        <img
+          class="mola2 absolute w-[280px] top-[70%] right-[29%]"
+          src="img/Helix.png"
+          alt=""
+        />
+        <img
+          class="esferas1 absolute w-[200px] top-[50%] right-[-18%]"
+          src="img/Spheres 3.png"
+          alt=""
+        />
+        <img
+          class="esferas2 absolute w-[200px] top-[50%] left-[-18%]"
+          src="img/Spheres 3.png"
+          alt=""
+        />
+
         <h2
-          class="titulo-acessorios cursor-default font-bold text-[50px] px-4 py-20 w-[309px]"
+          class="titulo-acessorios cursor-default font-bold text-[35px] px-4 my-20 w-[226px]"
         >
           <span class="bg-[#E7A9B3] p-2"> Acessórios: </span>
         </h2>
 
         <div
-          class="acessorios flex flex-row justify-around items-center flex-wrap px-4 gap-5"
+          class="acessorios flex flex-row justify-between items-center flex-wrap px-4 gap-5"
         >
           <div
-            class="acessorio bg-[#7B2E5D] flex flex-col p-5 rounded-xl gap-5 items-center"
+            class="primeira-div acessorio bg-[#7B2E5D] flex flex-col p-5 rounded-xl gap-5 items-center mt-5"
           >
             <img src="img/Acessorios1.jpg" alt="" width="300px" />
             <p class="desc-produto max-w-[300px] cursor-default">
               Lorem ipsum dolor sit amet consectetur adipisicing elit.
-              Architecto, sunt consequuntur totam inventore corrupti delectus
-              voluptatem eveniet nulla aspernatur a, reiciendis nesciunt eos
-              tempore deleniti sit debitis nostrum repellat amet.
             </p>
 
             <button class="button-acess1">
@@ -379,14 +388,11 @@
             </button>
           </div>
           <div
-            class="acessorio bg-[#2D4A53] flex flex-col p-5 rounded-xl gap-5 items-center"
+            class="segunda-div acessorio bg-[#2D4A53] flex flex-col p-5 rounded-xl gap-5 items-center mt-10"
           >
             <img src="img/aAcessorios2.jpg" alt="" width="300px" />
             <p class="desc-produto max-w-[300px] cursor-default">
-              Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-              Necessitatibus laudantium reprehenderit ad voluptatem, nihil
-              perspiciatis ea. Porro amet, tempora blanditiis earum cum
-              molestiae consectetur eligendi animi veniam ipsum nostrum ducimus.
+              Lorem ipsum dolor sit amet consectetur adipisicing elit.
             </p>
 
             <button class="button-acess2">
@@ -413,14 +419,11 @@
             </button>
           </div>
           <div
-            class="acessorio bg-[#B5EAD7] flex flex-col p-5 rounded-xl gap-5 items-center"
+            class="terceira-div acessorio bg-[#B5EAD7] flex flex-col p-5 rounded-xl gap-5 items-center mt-10"
           >
             <img src="img/Acessorios1.jpg" alt="" width="300px" />
             <p class="desc-produto max-w-[300px] cursor-default">
               Lorem ipsum dolor sit amet consectetur adipisicing elit.
-              Architecto, sunt consequuntur totam inventore corrupti delectus
-              voluptatem eveniet nulla aspernatur a, reiciendis nesciunt eos
-              tempore deleniti sit debitis nostrum repellat amet.
             </p>
 
             <button class="button-acess3">
@@ -447,14 +450,11 @@
             </button>
           </div>
           <div
-            class="acessorio bg-[#FF6B6B] flex flex-col p-5 rounded-xl gap-5 items-center"
+            class="quarta-div acessorio bg-[#FF6B6B] flex flex-col p-5 rounded-xl gap-5 items-center mt-10"
           >
             <img src="img/aAcessorios2.jpg" alt="" width="300px" />
             <p class="desc-produto max-w-[300px] cursor-default">
-              Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-              Necessitatibus laudantium reprehenderit ad voluptatem, nihil
-              perspiciatis ea. Porro amet, tempora blanditiis earum cum
-              molestiae consectetur eligendi animi veniam ipsum nostrum ducimus.
+              Lorem ipsum dolor sit amet consectetur adipisicing elit.
             </p>
 
             <button class="button-acess4">
@@ -480,13 +480,6 @@
               </svg>
             </button>
           </div>
-        </div>
-
-        <div class="acessorios">
-          <div></div>
-          <div></div>
-          <div></div>
-          <div></div>
         </div>
       </div>
     </main>
@@ -655,6 +648,121 @@
           },
         });
       });
+
+      document.addEventListener("DOMContentLoaded", () => {
+    gsap.registerPlugin(ScrollTrigger);
+    
+    // Detecta se é mobile
+    const isMobile = window.innerWidth < 768;
+    
+    // Configurações específicas para mobile
+    if (isMobile) {
+        // Redefine as posições e tamanhos para mobile
+        gsap.set([".mola", ".mola2", ".esferas1", ".esferas2"], {
+            width: 60, // Tamanho reduzido para mobile
+            height: 60
+        });
+        
+        // Animação da mola (mobile)
+        gsap.from(".mola", {
+            y: 50, // Distância menor
+            x: -30, // Vem levemente da esquerda
+            opacity: 0,
+            duration: 0.8,
+            scrollTrigger: {
+                trigger: ".acessorios",
+                start: "top 90%",
+                end: "top 100%",
+                scrub: 1,
+                markers: false
+            }
+        });
+        
+        // Animação da mola2 (mobile)
+        gsap.from(".mola2", {
+            y: -30, // Distância menor
+            opacity: 0,
+            duration: 0.8,
+            scrollTrigger: {
+                trigger: ".segunda-div",
+                start: "top 85%",
+                end: "top 50%",
+                scrub: 1,
+                markers: false
+            }
+        });
+        
+        // Animação das esferas (mobile)
+        gsap.from([".esferas1", ".esferas2"], {
+            y: -40, // Distância menor
+            opacity: 0,
+            duration: 0.8,
+            scrollTrigger: {
+                trigger: ".button-acess2",
+                start: "top 90%",
+                end: "top 50%",
+                scrub: 1,
+                markers: false
+            }
+        });
+        
+    } else {
+        // Configurações para desktop (original)
+        gsap.from(".mola", {
+            y: 100,
+            opacity: 0,
+            duration: 1,
+            scrollTrigger: {
+                trigger: ".acessorios",
+                start: "top 80%",
+                end: "top 20%",
+                scrub: 1,
+                markers: false
+            }
+        });
+        
+        gsap.from(".mola2", {
+            y: -50,
+            opacity: 0,
+            duration: 1,
+            scrollTrigger: {
+                trigger: ".terceira-div",
+                start: "top 80%",
+                end: "top 15%",
+                scrub: 1,
+                markers: false
+            }
+        });
+        
+        gsap.from([".esferas1", ".esferas2"], {
+            y: -60,
+            opacity: 0,
+            duration: 1,
+            scrollTrigger: {
+                trigger: ".button-acess2",
+                start: "top 80%",
+                end: "top 50%",
+                scrub: 1,
+                markers: false
+            }
+        });
+    }
+    
+    // Animação dos acessórios (igual para ambos)
+    gsap.from(".acessorio", {
+        opacity: 0,
+        y: isMobile ? 10 : 20, // Distância menor em mobile
+        duration: 0.8,
+        stagger: 0.2,
+        scrollTrigger: {
+            trigger: ".acessorios",
+            start: "top 90%",
+            end: "top 70%",
+            scrub: 1,
+            markers: false
+        }
+    });
+});
     </script>
 
     <script src="script.js"></script>

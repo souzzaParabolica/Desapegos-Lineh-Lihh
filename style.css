@@ -49,72 +49,6 @@ ul,
     color: var(--menu-button-color);
 }
 
-.back-to-top {
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
-    background-color: rgb(20, 20, 20);
-    border: none;
-    font-weight: 600;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    box-shadow: 0px 0px 0px 4px rgba(180, 160, 255, 0.253);
-    cursor: pointer;
-    transition-duration: 0.3s;
-    overflow: hidden;
-
-    position: fixed;
-    bottom: 80px;
-    right: 20px;
-
-    z-index: 99;
-}
-
-.back-to-top:active{
-    transform: translateY(2px);
-}
-
-.svgIcon {
-    width: 12px;
-    transition-duration: 0.3s;
-}
-
-.svgIcon path {
-    fill: white;
-}
-
-.back-to-top:hover {
-    width: 140px;
-    border-radius: 50px;
-    transition-duration: 0.3s;
-    background-color: rgb(181, 160, 255);
-    align-items: center;
-}
-
-.back-to-top:hover .svgIcon {
-    /* width: 20px; */
-    transition-duration: 0.3s;
-    transform: translateY(-200%);
-}
-
-.back-to-top::before {
-    position: absolute;
-    bottom: -20px;
-    content: "Back to Top";
-    color: white;
-    /* transition-duration: .3s; */
-    font-size: 0px;
-}
-
-.back-to-top:hover::before {
-    font-size: 13px;
-    opacity: 1;
-    bottom: unset;
-    /* transform: translateY(-30px); */
-    transition-duration: 0.3s;
-}
-
 .switch {
     position: fixed;
     bottom: 20px;
@@ -662,14 +596,20 @@ button {
     border-top-right-radius: 2px;
 }
 
+.acessorios {
+    z-index: 5;
+}
+
 .img4 {
     height: 300px;
 }
 
-.acessorio {}
-
 .acessorio img {
     border-radius: 0.75rem;
+}
+
+.acessorio {
+    height: auto;
 }
 
 .acessorio p {
@@ -756,4 +696,62 @@ button {
 
 .button-acess4:hover {
     background-color: #F0E4E4;
+}
+
+.mola {
+    transform: rotate(15deg);
+}
+
+.mola2 {
+    transform: rotate(-45deg);
+    z-index: 11;
+}
+
+.esferas1,
+.esferas2 {
+    transform: rotate(90deg);
+}
+
+.mola,
+.mola2,
+.esferas1,
+.esferas2 {
+    opacity: 1;
+}
+
+@media (max-width: 767px) {
+
+    .mola,
+    .mola2,
+    .esferas1,
+    .esferas2 {
+        width: 120px !important;
+        height: 120px !important;
+    }
+
+    /* Posicionamento diferente para mobile */
+    .mola {
+        left: -80px !important;
+        top: 10% !important;
+        transform: rotate(15deg) scale(0.8);
+        z-index: 11;
+    }
+
+    .mola2 {
+        right: -40px !important;
+        top: 34% !important;
+        transform: rotate(-45deg) scale(0.8);
+    }
+
+    .esferas1 {
+        left: -25% !important;
+        top: 50% !important;
+        transform: rotate(90deg) scale(0.7);
+    }
+
+    .esferas2 {
+        left: 85% !important;
+        top: 50% !important;
+        transform: rotate(90deg) scale(0.7);
+    }
 }
