@@ -47,10 +47,10 @@ nav {
     opacity: 0;
 }
 
-.produto p{
+.produto p {
     background-color: rgba(0, 0, 0, 0.141);
     border-radius: 0.75rem;
-    padding:20px;
+    padding: 20px;
 }
 
 .produto button {
@@ -110,14 +110,29 @@ button>svg {
     width: 34px;
     margin-left: 10px;
     transition: transform 0.3s ease-in-out;
+    animation: floatArrow 2s infinite ease-in-out;
 }
 
-button:hover svg {
-    transform: translateX(5px);
+@keyframes floatArrow {
+
+    0%,
+    100% {
+        transform: translateX(0);
+    }
+
+    50% {
+        transform: translateX(4px);
+    }
+}
+
+button:hover>svg {
+    /* Pausa a animação contínua */
+    transform: translateX(6px) !important;
+    /* Efeito mais pronunciado no hover */
 }
 
 button:active {
-    transform: scale(0.95);
+    transform: scale(0.95) !important;
 }
 
 .button-prod1 {
@@ -270,6 +285,6 @@ button:active {
     }
 }
 
-.logo-desapegos{
+.logo-desapegos {
     z-index: 10;
 }
