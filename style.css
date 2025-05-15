@@ -645,7 +645,7 @@ ul,
     /* Centraliza a caixa */
     margin-right: auto;
     /* Centraliza a caixa */
-    width: fit-content;
+    width: 300px;
     /* Ajusta a largura ao conteúdo */
     max-width: 90%;
     /* Garante que não ultrapasse a tela em dispositivos pequenos */
