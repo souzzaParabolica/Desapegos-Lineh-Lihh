@@ -638,7 +638,16 @@ ul,
 }
 
 .titulo-acessorios {
-    margin: 0 auto;
+    text-align: center;
+    /* Centraliza o texto */
+    margin-left: auto;
+    /* Centraliza a caixa */
+    margin-right: auto;
+    /* Centraliza a caixa */
+    width: fit-content;
+    /* Ajusta a largura ao conteúdo */
+    max-width: 90%;
+    /* Garante que não ultrapasse a tela em dispositivos pequenos */
 }
 
 .titulo-acessorios span {
