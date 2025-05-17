@@ -1,0 +1,851 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <script>
+      // Verifica se o usuário prefere tema escuro
+      if (
+        window.matchMedia &&
+        window.matchMedia("(prefers-color-scheme: dark)").matches
+      ) {
+        document.documentElement.classList.add("dark");
+      }
+
+      // Opcional: Monitorar mudanças na preferência do usuário
+      window
+        .matchMedia("(prefers-color-scheme: dark)")
+        .addEventListener("change", (event) => {
+          if (event.matches) {
+            document.documentElement.classList.add("dark");
+          } else {
+            document.documentElement.classList.remove("dark");
+          }
+        });
+    </script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <meta charset="UTF-8" />
+    <link rel="icon" href="img/Logo.png" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Desapegos Lineh Lihh</title>
+  </head>
+  <body>
+    <header class="">
+      <nav
+        class="flex flex-col md:flex-row justify-between flex-wrap rounded-xl items-center m-4 px-4"
+      >
+        <div class="flex justify-between w-full md:w-auto items-center">
+          <img
+            src="img/melissa-logo.png"
+            alt="Logo-Melissa"
+            class="w-20"
+            width="80px"
+          />
+
+          <!-- Botão do menu hamburguer (visível apenas em mobile) -->
+          <button
+            class="menu-button md:hidden focus:outline-none"
+            onclick="toggleMenu()"
+          >
+            <svg
+              class="w-6 h-6"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M4 6h16M4 12h16M4 18h16"
+              ></path>
+            </svg>
+          </button>
+        </div>
+
+        <ul
+          id="mobile-menu"
+          class="hidden md:flex space-y-2 md:space-y-0 md:space-x-5 cursor-pointer w-full md:w-auto mt-2 md:mt-0"
+        >
+          <li class="hover:font-bold hover:underline px-3 py-1 md:py-0">
+            Sapatos
+          </li>
+          <li class="hover:font-bold hover:underline px-3 py-1 md:py-0">
+            Acessórios
+          </li>
+          <li class="hover:font-bold hover:underline px-3 py-1 md:py-0">
+            Sobre nós
+          </li>
+          <li class="hover:font-bold hover:underline px-3 py-1 md:py-0">
+            Contato
+          </li>
+        </ul>
+      </nav>
+      <div class="hero rounded-xl mx-4 pt-4">
+        <img
+          class="img-banner rounded-xl"
+          src="img/imagem baqnner.jpg"
+          alt=""
+          width="50%"
+        />
+      </div>
+
+      <!-- <div
+        class="cursor-default hero-faixa flex flex-row justify-between items-center px-4 my-20 font-bold text-xl bg-[#E7A9B3] h-[10vh]"
+      >
+        <p>@lineh.lihh</p>
+        <p class="text-white">@lineh.lihh</p>
+        <p>@lineh.lihh</p>
+        <p class="text-white">@lineh.lihh</p>
+        <p>@lineh.lihh</p>
+        <p class="text-white">@lineh.lihh</p>
+      </div> -->
+    </header>
+
+    <main>
+      <a href="#">
+        <button class="btn">
+          <i data-lucide="arrow-up" class="icon cursor-pointer"></i></button
+      ></a>
+
+      <label class="switch">
+        <input id="input" type="checkbox" checked="darkTheme" />
+        <div class="slider round">
+          <div class="sun-moon">
+            <svg id="moon-dot-1" class="moon-dot" viewBox="0 0 100 100">
+              <circle cx="50" cy="50" r="50"></circle>
+            </svg>
+            <svg id="moon-dot-2" class="moon-dot" viewBox="0 0 100 100">
+              <circle cx="50" cy="50" r="50"></circle>
+            </svg>
+            <svg id="moon-dot-3" class="moon-dot" viewBox="0 0 100 100">
+              <circle cx="50" cy="50" r="50"></circle>
+            </svg>
+            <svg id="light-ray-1" class="light-ray" viewBox="0 0 100 100">
+              <circle cx="50" cy="50" r="50"></circle>
+            </svg>
+            <svg id="light-ray-2" class="light-ray" viewBox="0 0 100 100">
+              <circle cx="50" cy="50" r="50"></circle>
+            </svg>
+            <svg id="light-ray-3" class="light-ray" viewBox="0 0 100 100">
+              <circle cx="50" cy="50" r="50"></circle>
+            </svg>
+
+            <svg id="cloud-1" class="cloud-dark" viewBox="0 0 100 100">
+              <circle cx="50" cy="50" r="50"></circle>
+            </svg>
+            <svg id="cloud-2" class="cloud-dark" viewBox="0 0 100 100">
+              <circle cx="50" cy="50" r="50"></circle>
+            </svg>
+            <svg id="cloud-3" class="cloud-dark" viewBox="0 0 100 100">
+              <circle cx="50" cy="50" r="50"></circle>
+            </svg>
+            <svg id="cloud-4" class="cloud-light" viewBox="0 0 100 100">
+              <circle cx="50" cy="50" r="50"></circle>
+            </svg>
+            <svg id="cloud-5" class="cloud-light" viewBox="0 0 100 100">
+              <circle cx="50" cy="50" r="50"></circle>
+            </svg>
+            <svg id="cloud-6" class="cloud-light" viewBox="0 0 100 100">
+              <circle cx="50" cy="50" r="50"></circle>
+            </svg>
+          </div>
+          <div class="stars">
+            <svg id="star-1" class="star" viewBox="0 0 20 20">
+              <path
+                d="M 0 10 C 10 10,10 10 ,0 10 C 10 10 , 10 10 , 10 20 C 10 10 , 10 10 , 20 10 C 10 10 , 10 10 , 10 0 C 10 10,10 10 ,0 10 Z"
+              ></path>
+            </svg>
+            <svg id="star-2" class="star" viewBox="0 0 20 20">
+              <path
+                d="M 0 10 C 10 10,10 10 ,0 10 C 10 10 , 10 10 , 10 20 C 10 10 , 10 10 , 20 10 C 10 10 , 10 10 , 10 0 C 10 10,10 10 ,0 10 Z"
+              ></path>
+            </svg>
+            <svg id="star-3" class="star" viewBox="0 0 20 20">
+              <path
+                d="M 0 10 C 10 10,10 10 ,0 10 C 10 10 , 10 10 , 10 20 C 10 10 , 10 10 , 20 10 C 10 10 , 10 10 , 10 0 C 10 10,10 10 ,0 10 Z"
+              ></path>
+            </svg>
+            <svg id="star-4" class="star" viewBox="0 0 20 20">
+              <path
+                d="M 0 10 C 10 10,10 10 ,0 10 C 10 10 , 10 10 , 10 20 C 10 10 , 10 10 , 20 10 C 10 10 , 10 10 , 10 0 C 10 10,10 10 ,0 10 Z"
+              ></path>
+            </svg>
+          </div>
+        </div>
+      </label>
+
+      <h2
+        class="titulo-desapegos cursor-default font-bold text-[30px] px-4 mt-20"
+      >
+        Desapegos <span class="bg-[#E7A9B3] p-1"> Melissas:</span>
+      </h2>
+
+      <div
+        class="produtos mt-[30px] flex flex-row justify-around items-center flex-wrap px-4 w-screen"
+      >
+        <div
+          class="produto prod1 bg-[#F1A7A7] flex flex-col p-5 rounded-xl gap-5 items-center"
+        >
+          <img src="img/prod1.jpg" alt="" />
+          <p class="desc-produto max-w-[300px] cursor-default">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur
+            incidunt et facilis soluta quidem nam in a molestiae? Nihil est rem
+            autem voluptates deleniti maiores molestiae similique repellat
+            adipisci facilis!
+          </p>
+
+          <button class="button-prod1">
+            <span>Compre já</span>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 74 74"
+              height="34"
+              width="34"
+            >
+              <circle
+                stroke-width="3"
+                stroke="black"
+                r="35.5"
+                cy="37"
+                cx="37"
+              ></circle>
+              <path
+                fill="black"
+                d="M25 35.5C24.1716 35.5 23.5 36.1716 23.5 37C23.5 37.8284 24.1716 38.5 25 38.5V35.5ZM49.0607 38.0607C49.6464 37.4749 49.6464 36.5251 49.0607 35.9393L39.5147 26.3934C38.9289 25.8076 37.9792 25.8076 37.3934 26.3934C36.8076 26.9792 36.8076 27.9289 37.3934 28.5147L45.8787 37L37.3934 45.4853C36.8076 46.0711 36.8076 47.0208 37.3934 47.6066C37.9792 48.1924 38.9289 48.1924 39.5147 47.6066L49.0607 38.0607ZM25 38.5L48 38.5V35.5L25 35.5V38.5Z"
+              ></path>
+            </svg>
+          </button>
+        </div>
+        <div
+          class="produto prod2 bg-[#A3C4A8] flex flex-col p-5 rounded-xl gap-5"
+        >
+          <img src="img/pro2.jpg" alt="" />
+          <p class="desc-produto max-w-[300px] cursor-default">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempore
+            recusandae rerum possimus atque sit officiis. Molestiae quod enim
+            aliquid iusto temporibus nihil ad, beatae, dolorem deserunt est iure
+            harum illum?
+          </p>
+
+          <button class="button-prod2">
+            <span>Compre já</span>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 74 74"
+              height="34"
+              width="34"
+            >
+              <circle
+                stroke-width="3"
+                stroke="black"
+                r="35.5"
+                cy="37"
+                cx="37"
+              ></circle>
+              <path
+                fill="black"
+                d="M25 35.5C24.1716 35.5 23.5 36.1716 23.5 37C23.5 37.8284 24.1716 38.5 25 38.5V35.5ZM49.0607 38.0607C49.6464 37.4749 49.6464 36.5251 49.0607 35.9393L39.5147 26.3934C38.9289 25.8076 37.9792 25.8076 37.3934 26.3934C36.8076 26.9792 36.8076 27.9289 37.3934 28.5147L45.8787 37L37.3934 45.4853C36.8076 46.0711 36.8076 47.0208 37.3934 47.6066C37.9792 48.1924 38.9289 48.1924 39.5147 47.6066L49.0607 38.0607ZM25 38.5L48 38.5V35.5L25 35.5V38.5Z"
+              ></path>
+            </svg>
+          </button>
+        </div>
+        <div
+          class="produto prod3 bg-[#B4A7F5] flex flex-col p-5 rounded-xl gap-5"
+        >
+          <img src="img/prod3.jpg" alt="" />
+          <p class="desc-produto max-w-[300px] cursor-default">
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Tenetur
+            officiis praesentium, doloremque alias aliquam laboriosam dolor
+            soluta adipisci voluptate voluptatem aut ab labore quasi minus
+            consectetur quis magnam esse quo.
+          </p>
+
+          <button class="button-prod3">
+            <span>Compre já</span>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 74 74"
+              height="34"
+              width="34"
+            >
+              <circle
+                stroke-width="3"
+                stroke="black"
+                r="35.5"
+                cy="37"
+                cx="37"
+              ></circle>
+              <path
+                fill="black"
+                d="M25 35.5C24.1716 35.5 23.5 36.1716 23.5 37C23.5 37.8284 24.1716 38.5 25 38.5V35.5ZM49.0607 38.0607C49.6464 37.4749 49.6464 36.5251 49.0607 35.9393L39.5147 26.3934C38.9289 25.8076 37.9792 25.8076 37.3934 26.3934C36.8076 26.9792 36.8076 27.9289 37.3934 28.5147L45.8787 37L37.3934 45.4853C36.8076 46.0711 36.8076 47.0208 37.3934 47.6066C37.9792 48.1924 38.9289 48.1924 39.5147 47.6066L49.0607 38.0607ZM25 38.5L48 38.5V35.5L25 35.5V38.5Z"
+              ></path>
+            </svg>
+          </button>
+        </div>
+      </div>
+
+      <div class="banner relative">
+        <img
+          class="logo-desapegos"
+          src="img/Logo2-removebg-preview.png"
+          alt=""
+        />
+        <p class="r text-[50px] font-bold mt-20">
+          Colecionadora e amante da marca
+          <span class="bg-red-300"> Melissa </span> desde
+          <span class="bg-yellow-300 rounded-xl"> 2010!</span>
+        </p>
+
+        <img
+          class="esferas absolute right-7"
+          src="img/Spheres 2.png"
+          alt=""
+          width="100px"
+        />
+        <img
+          class="cubo absolute right-[22%] top-[18%]"
+          src="img/Cube 3.png"
+          alt=""
+          width="100px"
+        />
+        <img
+          class="pilula absolute right-5 top-[80%]"
+          src="img/Pill 2.png"
+          alt=""
+          width="100px"
+        />
+        <img
+          class="cilindro absolute right-[40%] top-[65%]"
+          src="img/Cylinder 1.png"
+          alt=""
+          width="100px"
+        />
+      </div>
+
+      <div
+        class="relative w-screen max-w-[75%] flex flex-col justify-center items-center mx-auto"
+      >
+        <img
+          class="mola absolute w-[280px] top-[25%] left-[%]"
+          src="img/Helix.png"
+          alt=""
+        />
+        <img
+          class="mola2 absolute w-[280px] top-[70%] right-[29%]"
+          src="img/Helix.png"
+          alt=""
+        />
+        <img
+          class="esferas1 absolute w-[200px] top-[50%] right-[-18%]"
+          src="img/Spheres 3.png"
+          alt=""
+        />
+        <img
+          class="esferas2 absolute w-[200px] top-[50%] left-[-18%]"
+          src="img/Spheres 3.png"
+          alt=""
+        />
+
+        <h2
+          class="titulo-acessorios cursor-default font-bold text-[35px] px-4 my-20 w-[226px]"
+        >
+          <span class="bg-[#E7A9B3] p-2"> Acessórios: </span>
+        </h2>
+
+        <div
+          class="acessorios flex flex-row justify-between items-center flex-wrap px-4 gap-5"
+        >
+          <div
+            class="primeira-div acessorio bg-[#7B2E5D] flex flex-col p-5 rounded-xl gap-5 items-center mt-5"
+          >
+            <img src="img/Acessorios1.jpg" alt="" width="300px" />
+            <p class="desc-produto max-w-[300px] cursor-default">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            </p>
+
+            <button class="button-acess1">
+              <span>Compre já</span>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 74 74"
+                height="34"
+                width="34"
+              >
+                <circle
+                  stroke-width="3"
+                  stroke="black"
+                  r="35.5"
+                  cy="37"
+                  cx="37"
+                ></circle>
+                <path
+                  fill="black"
+                  d="M25 35.5C24.1716 35.5 23.5 36.1716 23.5 37C23.5 37.8284 24.1716 38.5 25 38.5V35.5ZM49.0607 38.0607C49.6464 37.4749 49.6464 36.5251 49.0607 35.9393L39.5147 26.3934C38.9289 25.8076 37.9792 25.8076 37.3934 26.3934C36.8076 26.9792 36.8076 27.9289 37.3934 28.5147L45.8787 37L37.3934 45.4853C36.8076 46.0711 36.8076 47.0208 37.3934 47.6066C37.9792 48.1924 38.9289 48.1924 39.5147 47.6066L49.0607 38.0607ZM25 38.5L48 38.5V35.5L25 35.5V38.5Z"
+                ></path>
+              </svg>
+            </button>
+          </div>
+          <div
+            class="segunda-div acessorio bg-[#2D4A53] flex flex-col p-5 rounded-xl gap-5 items-center mt-10"
+          >
+            <img src="img/aAcessorios2.jpg" alt="" width="300px" />
+            <p class="desc-produto max-w-[300px] cursor-default">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            </p>
+
+            <button class="button-acess2">
+              <span>Compre já</span>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 74 74"
+                height="34"
+                width="34"
+              >
+                <circle
+                  stroke-width="3"
+                  stroke="black"
+                  r="35.5"
+                  cy="37"
+                  cx="37"
+                ></circle>
+                <path
+                  fill="black"
+                  d="M25 35.5C24.1716 35.5 23.5 36.1716 23.5 37C23.5 37.8284 24.1716 38.5 25 38.5V35.5ZM49.0607 38.0607C49.6464 37.4749 49.6464 36.5251 49.0607 35.9393L39.5147 26.3934C38.9289 25.8076 37.9792 25.8076 37.3934 26.3934C36.8076 26.9792 36.8076 27.9289 37.3934 28.5147L45.8787 37L37.3934 45.4853C36.8076 46.0711 36.8076 47.0208 37.3934 47.6066C37.9792 48.1924 38.9289 48.1924 39.5147 47.6066L49.0607 38.0607ZM25 38.5L48 38.5V35.5L25 35.5V38.5Z"
+                ></path>
+              </svg>
+            </button>
+          </div>
+          <div
+            class="terceira-div acessorio bg-[#B5EAD7] flex flex-col p-5 rounded-xl gap-5 items-center mt-10"
+          >
+            <img src="img/Acessorios1.jpg" alt="" width="300px" />
+            <p class="desc-produto max-w-[300px] cursor-default">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            </p>
+
+            <button class="button-acess3">
+              <span>Compre já</span>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 74 74"
+                height="34"
+                width="34"
+              >
+                <circle
+                  stroke-width="3"
+                  stroke="black"
+                  r="35.5"
+                  cy="37"
+                  cx="37"
+                ></circle>
+                <path
+                  fill="black"
+                  d="M25 35.5C24.1716 35.5 23.5 36.1716 23.5 37C23.5 37.8284 24.1716 38.5 25 38.5V35.5ZM49.0607 38.0607C49.6464 37.4749 49.6464 36.5251 49.0607 35.9393L39.5147 26.3934C38.9289 25.8076 37.9792 25.8076 37.3934 26.3934C36.8076 26.9792 36.8076 27.9289 37.3934 28.5147L45.8787 37L37.3934 45.4853C36.8076 46.0711 36.8076 47.0208 37.3934 47.6066C37.9792 48.1924 38.9289 48.1924 39.5147 47.6066L49.0607 38.0607ZM25 38.5L48 38.5V35.5L25 35.5V38.5Z"
+                ></path>
+              </svg>
+            </button>
+          </div>
+          <div
+            class="quarta-div acessorio bg-[#FF6B6B] flex flex-col p-5 rounded-xl gap-5 items-center mt-10"
+          >
+            <img src="img/aAcessorios2.jpg" alt="" width="300px" />
+            <p class="desc-produto max-w-[300px] cursor-default">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            </p>
+
+            <button class="button-acess4">
+              <span>Compre já</span>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 74 74"
+                height="34"
+                width="34"
+              >
+                <circle
+                  stroke-width="3"
+                  stroke="black"
+                  r="35.5"
+                  cy="37"
+                  cx="37"
+                ></circle>
+                <path
+                  fill="black"
+                  d="M25 35.5C24.1716 35.5 23.5 36.1716 23.5 37C23.5 37.8284 24.1716 38.5 25 38.5V35.5ZM49.0607 38.0607C49.6464 37.4749 49.6464 36.5251 49.0607 35.9393L39.5147 26.3934C38.9289 25.8076 37.9792 25.8076 37.3934 26.3934C36.8076 26.9792 36.8076 27.9289 37.3934 28.5147L45.8787 37L37.3934 45.4853C36.8076 46.0711 36.8076 47.0208 37.3934 47.6066C37.9792 48.1924 38.9289 48.1924 39.5147 47.6066L49.0607 38.0607ZM25 38.5L48 38.5V35.5L25 35.5V38.5Z"
+                ></path>
+              </svg>
+            </button>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        // Registra o plugin ScrollTrigger
+        gsap.registerPlugin(ScrollTrigger);
+
+        // Detecta se é mobile
+        const isMobile = window.innerWidth < 768;
+
+        // Configura as posições iniciais dos elementos com base no dispositivo
+        if (isMobile) {
+          // Configurações específicas para mobile
+          gsap.set(".esferas", { x: 100, opacity: 0 });
+          gsap.set(".cubo", { x: 100, opacity: 0, rotate: -30 }); // Vem da direita
+          gsap.set(".cilindro", { y: -80, opacity: 0, rotate: -55 }); // Vem de cima
+          gsap.set(".pilula", { y: 80, opacity: 0, rotate: 30 }); // Vem de baixo
+        } else {
+          // Configurações para desktop (original)
+          gsap.set(".esferas", { x: 200, opacity: 0 });
+          gsap.set(".cubo", { y: 100, opacity: 0, rotate: -30 });
+          gsap.set(".cilindro", { y: -100, opacity: 0, rotate: -55 });
+          gsap.set(".pilula", { y: -100, opacity: 0, rotate: 30 });
+        }
+
+        // Ajusta a duração baseado no dispositivo
+        const animDuration = isMobile ? 0.6 : 0.8;
+
+        // Cria a timeline principal
+        const tl = gsap.timeline({
+          scrollTrigger: {
+            trigger: ".banner",
+            start: isMobile ? "top 90%" : "top 80%",
+            end: isMobile ? "bottom 45%" : "bottom 55%",
+            scrub: 1,
+            markers: false,
+          },
+        });
+
+        // Animação para as esferas (mantém em ambos)
+        tl.to(".esferas", {
+          x: 0,
+          rotate: -15,
+          opacity: 1,
+          duration: animDuration + 0.2,
+          ease: "power2.out",
+        });
+
+        // Animação para o cubo (diferente em mobile)
+        if (isMobile) {
+          tl.to(
+            ".cubo",
+            {
+              x: 20, // No mobile vem da direita
+              rotate: 0,
+              opacity: 1,
+              duration: animDuration,
+              ease: "back.out(1.2)",
+            },
+            "-=0.5"
+          );
+        } else {
+          tl.to(
+            ".cubo",
+            {
+              y: 50, // No desktop vem de baixo
+              x: -50,
+              rotate: 0,
+              opacity: 1,
+              duration: animDuration,
+              ease: "back.out(1.2)",
+            },
+            "-=0.7"
+          );
+        }
+
+        // Animação para o cilindro (mantém vindo de cima em ambos)
+        tl.to(
+          ".cilindro",
+          {
+            y: -50,
+            rotate: 0,
+            opacity: 1,
+            duration: animDuration,
+            ease: "back.out(1.2)",
+          },
+          isMobile ? "-=0.5" : "-=0.7"
+        );
+
+        // Animação para a pílula (diferente em mobile)
+        if (isMobile) {
+          tl.to(
+            ".pilula",
+            {
+              y: -50, // No mobile vem de baixo
+              rotate: 0,
+              opacity: 1,
+              duration: animDuration,
+              ease: "power2.out",
+            },
+            "-=0.6"
+          );
+        } else {
+          tl.to(
+            ".pilula",
+            {
+              y: -170, // No desktop vem de cima
+              x: -50,
+              rotate: 0,
+              opacity: 1,
+              duration: animDuration,
+              ease: "power2.out",
+            },
+            "-=0.8"
+          );
+        }
+
+        // Efeito no texto principal
+        gsap.from(".banner p", {
+          scrollTrigger: {
+            trigger: ".banner",
+            start: isMobile ? "top 85%" : "top 70%",
+            toggleActions: "play none none none",
+          },
+          y: isMobile ? 30 : 50,
+          opacity: 0,
+          duration: animDuration,
+          ease: "power2.out",
+        });
+      });
+
+      document.addEventListener("DOMContentLoaded", function () {
+        gsap.registerPlugin(ScrollTrigger);
+
+        // Configuração inicial
+        gsap.set(".produto", { y: 30, opacity: 0 });
+        gsap.set(".produto button", { opacity: 0, y: 10 });
+
+        // Animação principal ultra fluida
+        gsap.to(".produto", {
+          y: 0,
+          opacity: 1,
+          ease: "none", // Remove qualquer easing para máxima fluidez
+          scrollTrigger: {
+            trigger: ".produtos",
+            start: "top bottom", // Começa quando o topo da seção tocar a parte inferior da viewport
+            end: "top 30%", // Termina quando o topo chegar a 30% da viewport
+            scrub: true, // Scrub 1:1 com o scroll (sem delay)
+            markers: false,
+          },
+        });
+
+        // Animação dos botões com timing perfeito
+        gsap.to(".produto button", {
+          opacity: 1,
+          y: 0,
+          ease: "none",
+          scrollTrigger: {
+            trigger: ".produtos",
+            start: "top 80%", // Começa um pouco depois dos cards
+            end: "top 40%",
+            scrub: true,
+            markers: false,
+          },
+        });
+      });
+
+      document.addEventListener("DOMContentLoaded", () => {
+        gsap.registerPlugin(ScrollTrigger);
+
+        // Detecta se é mobile
+        const isMobile = window.innerWidth < 768;
+
+        // Configurações específicas para mobile
+        if (isMobile) {
+          // Redefine as posições e tamanhos para mobile
+          gsap.set([".mola", ".mola2", ".esferas1", ".esferas2"], {
+            width: 60, // Tamanho reduzido para mobile
+            height: 60,
+          });
+
+          // Animação da mola (mobile)
+          gsap.from(".mola", {
+            y: 50, // Distância menor
+            x: -30, // Vem levemente da esquerda
+            opacity: 0,
+            duration: 0.8,
+            scrollTrigger: {
+              trigger: ".acessorios",
+              start: "top 50%",
+              end: "top 10%",
+              scrub: 1,
+              markers: false,
+            },
+          });
+
+          // Animação da mola2 (mobile)
+          gsap.from(".mola2", {
+            y: -30, // Distância menor
+            opacity: 0,
+            duration: 0.8,
+            scrollTrigger: {
+              trigger: ".segunda-div",
+              start: "top 85%",
+              end: "top 50%",
+              scrub: 1,
+              markers: false,
+            },
+          });
+
+          // Animação das esferas (mobile)
+          gsap.from([".esferas1", ".esferas2"], {
+            y: -40, // Distância menor
+            opacity: 0,
+            duration: 0.8,
+            scrollTrigger: {
+              trigger: ".button-acess2",
+              start: "top 15%",
+              end: "top -5%",
+              scrub: 1,
+              markers: false,
+            },
+          });
+        } else {
+          // Configurações para desktop (original)
+          gsap.from(".mola", {
+            y: 100,
+            opacity: 0,
+            duration: 1,
+            scrollTrigger: {
+              trigger: ".acessorios",
+              start: "top 80%",
+              end: "top 20%",
+              scrub: 1,
+              markers: false,
+            },
+          });
+
+          gsap.from(".mola2", {
+            y: -50,
+            opacity: 0,
+            duration: 1,
+            scrollTrigger: {
+              trigger: ".terceira-div",
+              start: "top 80%",
+              end: "top 20%",
+              scrub: 1,
+              markers: false,
+            },
+          });
+
+          gsap.from([".esferas1", ".esferas2"], {
+            y: -60,
+            opacity: 0,
+            duration: 1,
+            scrollTrigger: {
+              trigger: ".button-acess2",
+              start: "top 80%",
+              end: "top 50%",
+              scrub: 1,
+              markers: false,
+            },
+          });
+        }
+
+        // Animação dos acessórios (igual para ambos)
+        gsap.from(".acessorio", {
+          opacity: 0,
+          y: isMobile ? 10 : 20, // Distância menor em mobile
+          duration: 0.8,
+          stagger: 0.2,
+          scrollTrigger: {
+            trigger: ".acessorios",
+            start: "top 90%",
+            end: "top 70%",
+            scrub: 1,
+            markers: false,
+          },
+        });
+      });
+    </script>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function() {
+    // 1. Inicializa os ícones Lucide (se estiver usando)
+    if(typeof lucide !== 'undefined') {
+        lucide.createIcons();
+    }
+
+    // 2. Configuração inicial - esconde o botão
+    const btn = document.querySelector('.btn');
+    btn.style.opacity = '0';
+    btn.style.pointerEvents = 'none'; // Impede cliques quando invisível
+    btn.style.transform = 'translateY(20px)';
+
+    // 3. Controle de visibilidade baseado no scroll
+    window.addEventListener('scroll', function() {
+        if (window.scrollY > 300) { // Aparece após rolar 300px
+            btn.style.opacity = '1';
+            btn.style.pointerEvents = 'auto';
+            btn.style.transform = 'translateY(0)';
+            btn.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
+        } else { // Esconde quando perto do topo
+            btn.style.opacity = '0';
+            btn.style.pointerEvents = 'none';
+            btn.style.transform = 'translateY(20px)';
+        }
+    });
+
+    // 4. Animação suave ao clicar
+    btn.addEventListener('click', function(e) {
+        e.preventDefault();
+        
+        // Desativa o botão durante a animação
+        btn.style.pointerEvents = 'none';
+        
+        // Animação de scroll suave
+        const startPosition = window.pageYOffset;
+        const distance = -startPosition;
+        const duration = 1000; // 1 segundo
+        let start = null;
+        
+        function step(timestamp) {
+            if (!start) start = timestamp;
+            const progress = timestamp - start;
+            window.scrollTo(0, easeInOutCubic(progress, startPosition, distance, duration));
+            if (progress < duration) {
+                window.requestAnimationFrame(step);
+            } else {
+                btn.style.pointerEvents = 'auto'; // Reativa após animação
+            }
+        }
+        
+        // Função de easing para suavizar
+        function easeInOutCubic(t, b, c, d) {
+            t /= d/2;
+            if (t < 1) return c/2*t*t*t + b;
+            t -= 2;
+            return c/2*(t*t*t + 2) + b;
+        }
+        
+        window.requestAnimationFrame(step);
+    });
+});
+    </script>
+
+    <script src="script.js"></script>
+
+    <script>
+      function toggleMenu() {
+        const menu = document.getElementById("mobile-menu");
+        menu.classList.toggle("hidden");
+      }
+    </script>
+
+    <script>
+      lucide.createIcons();
+    </script>
+  </body>
+</html>
