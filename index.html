@@ -542,7 +542,10 @@
           </a>
         </li>
         <li class="relative">
-          <i data-lucide="mail-plus" class="email cursor-pointer w-8 h-8"></i>
+          <i data-lucide="mail-plus" class="email cursor-pointer w-8 h-8" onclick="copyEmail()"></i>
+          <span id="email-tooltip" class="email_addres absolute left-[-100%] top-[100%] hidden bg-gray-200 dark:bg-gray-700 px-2 py-1 rounded text-sm whitespace-nowrap">
+            gtxss@gmail.com (clique para copiar)
+          </span>
         </li>
         <li class="wtzp">
           <a href="https://wa.me/11961348443" target="_blank">
@@ -997,6 +1000,96 @@
         setupBackToTopButton();
         setupMobileMenu();
       });
+    </script>
+    <script>
+      async function copyEmail() {
+        const email = "ticka1989@hotmail.com";
+        const tooltip = document.getElementById("email-tooltip");
+
+        try {
+          // Método moderno (funciona na maioria dos navegadores)
+          if (navigator.clipboard) {
+            await navigator.clipboard.writeText(email);
+          }
+          // Fallback para dispositivos móveis e navegadores mais antigos
+          else {
+            const textarea = document.createElement("textarea");
+            textarea.value = email;
+            textarea.style.position = "fixed"; // Evitar rolagem
+            document.body.appendChild(textarea);
+            textarea.select();
+
+            // Tenta executar o comando de cópia
+            const successful = document.execCommand("copy");
+            document.body.removeChild(textarea);
+
+            if (!successful) {
+              throw new Error("Fallback copy failed");
+            }
+          }
+
+          // Feedback visual
+          tooltip.classList.remove("hidden");
+          tooltip.textContent = "Email copiado!";
+          tooltip.style.backgroundColor = "#000020"; // Verde para sucesso
+          tooltip.style.color = "white";
+        } catch (err) {
+          console.error("Falha ao copiar email: ", err);
+
+          // Feedback de erro
+          tooltip.classList.remove("hidden");
+          tooltip.textContent = "Clique para selecionar";
+          tooltip.style.backgroundColor = "#F44336"; // Vermelho para erro
+          tooltip.style.color = "white";
+
+          // Fallback: seleciona o texto para o usuário copiar manualmente
+          const range = document.createRange();
+          range.selectNodeContents(tooltip);
+          const selection = window.getSelection();
+          selection.removeAllRanges();
+          selection.addRange(range);
+
+          return; // Não esconde o tooltip no caso de erro
+        }
+
+        // Esconder após 2 segundos (apenas no sucesso)
+        setTimeout(() => {
+          tooltip.classList.add("hidden");
+          tooltip.textContent = "ticka1989@hotmail.com (clique para copiar)";
+          tooltip.style.backgroundColor = ""; // Reset
+          tooltip.style.color = "";
+        }, 2000);
+      }
+
+      // Mostrar tooltip ao passar o mouse/toque
+      document
+        .querySelector(".email")
+        .addEventListener("mouseover", showTooltip);
+      document
+        .querySelector(".email")
+        .addEventListener("touchstart", showTooltip, { passive: true });
+
+      // Esconder tooltip ao sair
+      document
+        .querySelector(".email")
+        .addEventListener("mouseout", hideTooltip);
+      document
+        .querySelector(".email")
+        .addEventListener("touchend", hideTooltip);
+
+      function showTooltip() {
+        const tooltip = document.getElementById("email-tooltip");
+        if (tooltip.textContent === "gtxss@gmail.com (clique para copiar)") {
+          tooltip.classList.remove("hidden");
+        }
+      }
+
+      function hideTooltip() {
+        const tooltip = document.getElementById("email-tooltip");
+        if (tooltip.textContent === "gtxss@gmail.com (clique para copiar)") {
+          tooltip.classList.add("hidden");
+        }
+      }
     </script>
     <script src="script.js"></script>
   </body>
