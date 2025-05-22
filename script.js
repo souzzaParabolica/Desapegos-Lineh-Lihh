@@ -1,13 +1,13 @@
 document.addEventListener("DOMContentLoaded", () => {
   const themeToggle = document.getElementById("input");
-  const logo = document.querySelector('img[alt="Logo-Melissa"]');
+  const logo = document.querySelector('img[alt="Logo"]');
 
   // Função para atualizar a logo com base no tema atual
   const updateLogo = () => {
     if (document.documentElement.classList.contains("dark")) {
-      logo.src = "img/melissa-logobranca.png";
+      logo.src = "img/Logo2-removebg-preview.png";
     } else {
-      logo.src = "img/melissa-logo.png";
+      logo.src = "img/Logo2-removebg-preview.png";
     }
   };
 

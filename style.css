@@ -41,11 +41,25 @@ nav {
     background-color: var(--secondary-bg-color);
 }
 
+.produtos .produto {
+    height: 752px !important;
+}
+
 ul,
 .titulo-desapegos,
 .titulo-acessorios,
 .desc-produto {
     color: var(--text-color);
+}
+
+.lembrete {
+    font-family: "Poppins", sans-serif;
+    font-weight: 800;
+    font-style: normal;
+    text-transform: uppercase;
+    margin: 0 auto;
+    color: var(--text-color) !important;
+    cursor: default;
 }
 
 .menu-button {
@@ -411,9 +425,13 @@ ul,
 }
 
 .produto p {
-    background-color: rgba(0, 0, 0, 0.141);
     border-radius: 0.75rem;
     padding: 20px;
+}
+
+.nome {
+    background-color: rgba(0, 0, 0, 0.141);
+    font-size: 1.2em;
 }
 
 .produto button {
@@ -438,7 +456,16 @@ ul,
 /* Correção para os botões */
 .button-prod1,
 .button-prod2,
-.button-prod3 {
+.button-prod3,
+.button-prod4,
+.button-prod5,
+.button-prod6,
+.button-prod7,
+.button-prod8,
+.button-prod9,
+.button-prod10,
+.button-prod11,
+.button-prod12 {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -452,17 +479,32 @@ ul,
 
 .button-prod1:hover,
 .button-prod2:hover,
-.button-prod3:hover {
+.button-prod3:hover,
+.button-prod4:hover,
+.button-prod5:hover,
+.button-prod6:hover,
+.button-prod7:hover,
+.button-prod8:hover,
+.button-prod9:hover,
+.button-prod10:hover,
+.button-prod11:hover,
+.button-prod12:hover {
     transform: translateY(-2px);
 }
 
 .button-acess1,
-.button-acess2,
-.button-acess3,
-.button-acess4,
 .button-prod1,
 .button-prod2,
-.button-prod3 {
+.button-prod3,
+.button-prod4,
+.button-prod5,
+.button-prod6,
+.button-prod7,
+.button-prod8,
+.button-prod9,
+.button-prod10,
+.button-prod11,
+.button-prod12 {
     cursor: pointer;
     font-weight: 700;
     transition: all 0.2s;
@@ -477,7 +519,16 @@ ul,
 
 .button-prod1>svg,
 .button-prod2>svg,
-.button-prod3>svg {
+.button-prod3>svg,
+.button-prod4>svg,
+.button-prod5>svg,
+.button-prod6>svg,
+.button-prod7>svg,
+.button-prod8>svg,
+.button-prod9>svg,
+.button-prod10>svg,
+.button-prod11>svg,
+.button-prod12>svg {
     width: 34px;
     margin-left: 10px;
     transition: transform 0.3s ease-in-out;
@@ -510,6 +561,87 @@ ul,
 
 .button-prod3:hover {
     background-color: #C9902F;
+}
+
+.button-prod4 {
+    background-color: #e60073;
+    color: #ffffff;
+}
+
+.button-prod4:hover {
+    background-color: #ff3399;
+}
+
+.button-prod5 {
+    background-color: #d4af37;
+    color: #2e1f3f;
+}
+
+.button-prod5:hover {
+    background-color: #e6c55a;
+}
+
+.button-prod6 {
+    background-color: #4eaaff;
+    color: #ffffff;
+}
+
+.button-prod6:hover {
+    background-color: #80d0ff;
+}
+
+.button-prod7 {
+    background-color: #005fcc;
+    color: #0f2b3c;
+}
+
+.button-prod7:hover {
+    background-color: #338dff;
+}
+
+.button-prod8 {
+    background-color: #b57edc;
+    color: #202938;
+}
+
+.button-prod8:hover {
+    background-color: #c798e6;
+}
+
+.button-prod9 {
+    background-color: #d35400;
+    color: #ffffff;
+}
+
+.button-prod9:hover {
+    background-color: #e67e22;
+}
+
+.button-prod10 {
+    background-color: #a0a9b8;
+    color: #1f2733;
+}
+
+.button-prod10:hover {
+    background-color: #c1c8d8;
+}
+
+.button-prod11 {
+    background-color: #c0392b;
+    color: #ffffff;
+}
+
+.button-prod11:hover {
+    background-color: #e74c3c;
+}
+
+.button-prod12 {
+    background-color: #7e6dbf;
+    color: #ffffff;
+}
+
+.button-prod12:hover {
+    background-color: #a598d1;
 }
 
 .banner {
@@ -679,15 +811,15 @@ ul,
 }
 
 .acessorio p {
-    background-color: rgba(0, 0, 0, 0.141);
     border-radius: 0.75rem;
     padding: 20px;
 }
 
-.button-acess1,
-.button-acess2,
-.button-acess3,
-.button-acess4 {
+.primeira-div{
+    background-color: rgba(0, 0, 0, 0.141);
+}
+
+.button-acess1 {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -699,17 +831,11 @@ ul,
     transition: all 0.3s ease;
 }
 
-.button-acess1:hover,
-.button-acess2:hover,
-.button-acess3:hover,
-.button-acess4:hover {
+.button-acess1:hover {
     transform: translateY(-2px);
 }
 
-.button-acess1>svg,
-.button-acess2>svg,
-.button-acess3>svg,
-.button-acess4>svg {
+.button-acess1>svg {
     width: 34px;
     margin-left: 10px;
     transition: transform 0.3s ease-in-out;
@@ -729,39 +855,12 @@ ul,
 }
 
 .button-acess1 {
-    background-color: #FADCE6;
-    color: #7B2E5D;
-}
-
-.button-acess2 {
-    background-color: #F9D5A7;
-    color: #2D4A53;
-}
-
-.button-acess3 {
-    background-color: #355E57;
-    color: #B5EAD7;
-}
-
-.button-acess4 {
-    background-color: #FDFDFD;
-    color: #FF6B6B;
+    background-color: #a0522d;
+    color: #ffffff;
 }
 
 .button-acess1:hover {
-    background-color: #F4A7C1;
-}
-
-.button-acess2:hover {
-    background-color: #E8B872;
-}
-
-.button-acess3:hover {
-    background-color: #27423C;
-}
-
-.button-acess4:hover {
-    background-color: #F0E4E4;
+    background-color: #c0723a;
 }
 
 .mola {
@@ -774,6 +873,7 @@ ul,
 
 .esferas1 {
     transform: rotate(45deg);
+    z-index: 11;
 }
 
 .esferas2 {
@@ -820,9 +920,7 @@ ul,
     }
 
     .mola2 {
-        right: -50px !important;
-        top: 34% !important;
-        transform: rotate(-45deg) scale(0.8);
+        opacity: 0;
     }
 
     .esferas1 {
@@ -832,8 +930,8 @@ ul,
     }
 
     .esferas2 {
-        left: 50% !important;
-        top: 75% !important;
+        left: 40% !important;
+        top: 90% !important;
         transform: scale(0.7) rotate(15deg);
         z-index: 10;
     }
@@ -851,7 +949,7 @@ ul,
     }
 
     .acessorio {
-        transform: scale(0.8);
+        transform: scale(1);
     }
 
     .logo-desapegos {
@@ -874,13 +972,16 @@ ul,
     .rosca2 {
         width: 80% !important;
         top: 32% !important;
-        right: 1% !important;
     }
 
     .circulo-plano {
         width: 80% !important;
         top: 65% !important;
         left: 5% !important;
+    }
+
+    .lembrete{
+        font-size: 30px !important;
     }
 }
 
@@ -911,7 +1012,8 @@ footer .menu li {
     list-style: none;
 }
 
-footer .social_icon li a, footer .social_icon li .email {
+footer .social_icon li a,
+footer .social_icon li .email {
     font-size: 2em;
     color: #fff;
     margin: 0 10px;
@@ -980,7 +1082,8 @@ footer .wave#wave4 {
     0% {
         background-position-x: 1000px;
     }
-    100%{
+
+    100% {
         background-position-x: 0px;
     }
 }
