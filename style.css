@@ -815,7 +815,7 @@ ul,
     padding: 20px;
 }
 
-.primeira-div{
+.primeira-div {
     background-color: rgba(0, 0, 0, 0.141);
 }
 
@@ -888,9 +888,40 @@ ul,
 }
 
 .rosca,
-.rosca2 {
-    opacity: 1;
+.rosca2,
+.pill,
+.pillR,
+.pillA,
+.cilindroA,
+.cilindroR,
+.cilindroL,
+.flatA,
+.flatV,
+.flatL {
     width: 40% !important;
+}
+
+.rosca,
+.rosca2,
+.circulo-plano,
+.flatA,
+.flatV,
+.flatL {
+    opacity: 0;
+}
+
+.pill,
+.pillR,
+.pillA {
+    transform: rotate(-30deg);
+    opacity: 0;
+}
+
+.cilindroA,
+.cilindroR,
+.cilindroL {
+    transform: rotate(60deg);
+    opacity: 0;
 }
 
 .circulo-plano {
@@ -959,7 +990,16 @@ ul,
 
     .rosca,
     .rosca2,
-    .circulo-plano {
+    .circulo-plano,
+    .pill,
+    .pillR,
+    .pillA,
+    .cilindroA,
+    .cilindroR,
+    .cilindroL,
+    .flatA,
+    .flatV,
+    .flatL {
         opacity: 0.7;
     }
 
@@ -971,17 +1011,72 @@ ul,
 
     .rosca2 {
         width: 80% !important;
-        top: 32% !important;
+        top: 8% !important;
     }
 
     .circulo-plano {
         width: 80% !important;
-        top: 65% !important;
+        top: 16.5% !important;
         left: 5% !important;
     }
 
-    .lembrete{
-        font-size: 30px !important;
+    .pill {
+        width: 80% !important;
+        top: 24.5% !important;
+        left: 0% !important;
+    }
+
+    .pillR {
+        width: 80% !important;
+        top: 33.2% !important;
+        left: 25% !important;
+    }
+
+    .pillA {
+        width: 80% !important;
+        top: 41.3% !important;
+        left: 0% !important;
+    }
+
+    .cilindroA {
+        width: 80% !important;
+        top: 50% !important;
+        left: 25% !important;
+    }
+
+    .cilindroR {
+        width: 80% !important;
+        top: 58.2% !important;
+        left: 0% !important;
+    }
+
+    .cilindroL {
+        width: 80% !important;
+        top: 66.7% !important;
+        left: 25% !important;
+    }
+
+    .flatA {
+        width: 80% !important;
+        top: 75% !important;
+        left: 0% !important;
+    }
+
+    .flatV {
+        width: 80% !important;
+        top: 83.2% !important;
+        left: 25% !important;
+    }
+
+    .flatL {
+        width: 80% !important;
+        top: 91.5% !important;
+        left: 0% !important;
+    }
+
+    .lembrete {
+        font-size: 25px !important;
+        width: 85% !important;
     }
 }
 
