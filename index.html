@@ -700,7 +700,7 @@
           src="img/Logo2-removebg-preview.png"
           alt=""
         />
-        <p class="r text-[50px] font-bold mt-20">
+        <p class="text-[50px] font-bold mt-20">
           Colecionadora e amante da marca
           <span class="bg-red-300"> Melissa </span> desde
           <span class="bg-yellow-300 rounded-xl"> 2010!</span>
@@ -732,9 +732,12 @@
         />
       </div>
 
-      <section id="seção-acessorios" class="sescao-acessorios mb-[300px]">
+      <section
+        id="seção-acessorios"
+        class="sescao-acessorios mb-[300px] flex flex-col justify-center items-center"
+      >
         <div
-          class="relative w-screen max-w-[75%] flex flex-col justify-between items-center mx-auto flex-wrap"
+          class="relative w-screen max-w-[75%] flex flex-col justify-between items-center flex-wrap"
           s
         >
           <img
@@ -905,16 +908,17 @@
         });
       }
 
-      gsap.to(".sapatos",{
-        backgroundImage:"linear-gradient(to right, #fbdbd4, white 99%)",
+      gsap.to(".sapatos", {
+        backgroundImage: "linear-gradient(to right, #fbdbd4, white 99%)",
         scrollTrigger: {
           trigger: ".banner",
           start: "top 90%",
           end: "top 60%",
-          scrub: 1.2,
+          scrub: 1,
           markers: false,
         },
-      })
+      });
+
 
       // Animação do banner principal
       function setupBannerAnimations() {
@@ -1123,7 +1127,7 @@
         });
         gsap.to(".cilindroA", {
           y: -15,
-          opacity:1,
+          opacity: 1,
           scrollTrigger: {
             trigger: ".cilindroA",
             start: "top 55%",
