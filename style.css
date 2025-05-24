@@ -517,6 +517,23 @@ ul,
     /* width: 60%; */
 }
 
+.button-acess1:active,
+.button-prod1:active,
+.button-prod2:active,
+.button-prod3:active,
+.button-prod4:active,
+.button-prod5:active,
+.button-prod6:active,
+.button-prod7:active,
+.button-prod8:active,
+.button-prod9:active,
+.button-prod10:active,
+.button-prod11:active,
+.button-prod12:active {
+    transform: scale(0.95) !important;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2) !important;
+}
+
 .button-prod1>svg,
 .button-prod2>svg,
 .button-prod3>svg,
