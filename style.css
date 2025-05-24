@@ -712,7 +712,7 @@ ul,
 /* Media queries para desktop */
 @media (min-width: 768px) {
     .banner {
-        /* margin-top: 100px; */
+        margin-top: 0px;
         justify-content: space-around;
         flex-direction: row;
     }
