@@ -183,7 +183,7 @@
           </div>
         </div>
       </label>
-      <section id="seção-sapatos" class="sapatos">
+      <section id="seção-sapatos" class="sapatos pb-20">
         <h2
           class="titulo-desapegos cursor-default font-bold text-[30px] px-4 mt-20"
         >
@@ -904,6 +904,17 @@
           }
         });
       }
+
+      gsap.to(".sapatos",{
+        backgroundImage:"linear-gradient(to right, #fbdbd4, white 99%)",
+        scrollTrigger: {
+          trigger: ".banner",
+          start: "top 90%",
+          end: "top 60%",
+          scrub: 1.2,
+          markers: false,
+        },
+      })
 
       // Animação do banner principal
       function setupBannerAnimations() {

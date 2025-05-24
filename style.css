@@ -648,7 +648,6 @@ ul,
     background-image: linear-gradient(to right, #fbdbd4, white 99%);
     background-repeat: no-repeat;
     background-size: cover;
-    margin-top: 50px;
     width: 100%;
     height: 100vh;
     display: flex;
@@ -713,7 +712,7 @@ ul,
 /* Media queries para desktop */
 @media (min-width: 768px) {
     .banner {
-        margin-top: 100px;
+        /* margin-top: 100px; */
         justify-content: space-around;
         flex-direction: row;
     }
@@ -944,10 +943,11 @@ ul,
 
     /* Posicionamento diferente para mobile */
     .mola {
-        left: -80px !important;
+        /* left: -80px !important;
         top: 10% !important;
         transform: rotate(15deg) scale(0.8);
-        z-index: 11;
+        z-index: 11; */
+        opacity: 0;
     }
 
     .mola2 {
@@ -955,16 +955,22 @@ ul,
     }
 
     .esferas1 {
-        left: -35% !important;
+        /* left: -35% !important;
         top: 63% !important;
-        transform: scale(0.7) rotate(-30deg);
+        transform: scale(0.7) rotate(-30deg); */
+        opacity: 0;
     }
 
     .esferas2 {
-        left: 40% !important;
+        /* left: 40% !important;
         top: 90% !important;
         transform: scale(0.7) rotate(15deg);
-        z-index: 10;
+        z-index: 10; */
+        opacity:0 ;
+    }
+
+    .titulo-acessorios{
+        margin-bottom: 0 !important;
     }
 
     .img-banner {
