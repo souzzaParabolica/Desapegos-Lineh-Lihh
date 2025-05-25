@@ -7,6 +7,7 @@
     --secondary-bg-color: #eaeaea;
     --menu-button-color: #000;
     --border-button: 1px solid #000;
+    --banner-color:linear-gradient(to top, #ffffff, rgb(80, 80, 80) 99%);
 
 
 }
@@ -18,6 +19,7 @@
     --hero-color: linear-gradient(to bottom, #2d3748, #121212);
     --menu-button-color: white;
     --border-button: 1px solid #ffffff;
+    --banner-color: linear-gradient(to top, #121212, rgb(80, 80, 80) 99%);
 
 }
 
@@ -48,8 +50,15 @@ nav {
 ul,
 .titulo-desapegos,
 .titulo-acessorios,
-.desc-produto {
+.desc-produto, .textbanner {
     color: var(--text-color);
+}
+
+.titulo-acessorios,
+.titulo-desapegos{
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    font-style: normal;
 }
 
 .lembrete {
@@ -60,6 +69,12 @@ ul,
     margin: 0 auto;
     color: var(--text-color) !important;
     cursor: default;
+}
+
+.textbanner{
+    font-family: "Poppins", sans-serif;
+    font-weight: 600;
+    font-style: normal;
 }
 
 .menu-button {
@@ -401,7 +416,7 @@ ul,
     border-radius: 0.75rem;
 }
 
-.produtos {
+.produtos, .sescao-acessorios {
     font-family: "Poppins", sans-serif;
     font-weight: 300;
     font-style: normal;
@@ -662,7 +677,7 @@ ul,
 }
 
 .banner {
-    background-image: linear-gradient(to right, #fbdbd4, white 99%);
+    background-image: var(--banner-color);
     background-repeat: no-repeat;
     background-size: cover;
     width: 100%;
@@ -684,7 +699,6 @@ ul,
 
 .banner p {
     max-width: 90%;
-    color: rgb(0, 0, 0);
     z-index: 99;
     font-size: 24px;
     line-height: 1.3;
@@ -766,15 +780,9 @@ ul,
     /* Volta à posição original */
     .pilula {
         right: -20px;
-        top: 75%;
         left: auto;
     }
 
-    .cilindro {
-        right: 27%;
-        top: 65%;
-        left: auto;
-    }
 
     /* Volta à posição original */
 }
@@ -1356,8 +1364,4 @@ footer .wave#wave4 {
         width: 10px;
         height: 10px;
     }
-}
-
-.sescao-acessorios {
-    background-image: linear-gradient(to top, rgb(55, 65, 81), rgb(17, 24, 39), #121212);
 }
