@@ -1428,50 +1428,12 @@
         </div>
       </section>
 
-      <div class="banner relative">
-        <img
-          class="logo-desapegos"
-          src="img/Logo2-removebg-preview.png"
-          alt=""
-        />
-        <p class="text-[50px] font-bold mt-20">
-          Colecionadora e amante da marca
-          <span class="bg-red-300"> Melissa </span> desde
-          <span class="bg-yellow-300 rounded-xl"> 2010!</span>
-        </p>
-
-        <img
-          class="esferas absolute right-7"
-          src="img/Spheres 2.png"
-          alt=""
-          width="100px"
-        />
-        <img
-          class="cubo absolute right-[22%] top-[18%]"
-          src="img/Cube 3.png"
-          alt=""
-          width="100px"
-        />
-        <img
-          class="pilula absolute right-5 top-[80%]"
-          src="img/Pill 2.png"
-          alt=""
-          width="100px"
-        />
-        <img
-          class="cilindro absolute right-[40%] top-[65%]"
-          src="img/Cylinder 1.png"
-          alt=""
-          width="100px"
-        />
-      </div>
-
       <section
         id="seção-acessorios"
-        class="sescao-acessorios mb-[300px] flex flex-col justify-center items-center"
+        class="sescao-acessorios flex flex-col justify-center items-center"
       >
         <div
-          class="relative w-screen max-w-[75%] flex flex-col justify-between items-center flex-wrap"
+          class="acessorio1 relative mb-[80px] w-screen max-w-[75%] flex flex-col justify-between items-center flex-wrap"
           s
         >
           <img
@@ -1541,6 +1503,46 @@
           </div>
         </div>
       </section>
+
+      <div class="banner relative mb-[-80px]">
+        <img
+          class="logo-desapegos"
+          src="img/Logo2-removebg-preview.png"
+          alt=""
+        />
+        <p class="text-[50px] font-bold mt-20">
+          Colecionadora e amante da marca
+          <span class="bg-red-300"> Melissa </span> desde
+          <span class="bg-yellow-300 rounded-xl"> 2010!</span>
+        </p>
+
+        <img
+          class="esferas absolute right-7"
+          src="img/Spheres 2.png"
+          alt=""
+          width="100px"
+        />
+        <img
+          class="cubo absolute right-[22%] top-[18%]"
+          src="img/Cube 3.png"
+          alt=""
+          width="100px"
+        />
+        <img
+          class="pilula absolute right-5 top-[80%]"
+          src="img/Pill 2.png"
+          alt=""
+          width="100px"
+        />
+        <img
+          class="cilindro absolute right-[40%] top-[65%]"
+          src="img/Cylinder 1.png"
+          alt=""
+          width="100px"
+        />
+      </div>
+
+      
     </main>
 
     <footer>
@@ -1642,12 +1644,23 @@
         });
       }
 
-      gsap.to(".sapatos", {
+      gsap.to(".sescao-acessorios", {
         backgroundImage: "linear-gradient(to right, #fbdbd4, white 99%)",
         scrollTrigger: {
           trigger: ".banner",
           start: "top 90%",
           end: "top 60%",
+          scrub: 1,
+          markers: false,
+        },
+      });
+
+      gsap.to(".acessorio1", {
+        opacity: 0,
+        scrollTrigger: {
+          trigger: ".banner",
+          start: "top 90%",
+          end: "top 30%",
           scrub: 1,
           markers: false,
         },

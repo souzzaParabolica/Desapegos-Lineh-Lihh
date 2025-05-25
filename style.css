@@ -1303,34 +1303,43 @@ footer .wave#wave4 {
     transition: background 0.3s ease;
 }
 
-.indicator1.active{
+.indicator1.active {
     background: #E7A9B3;
 }
-.indicator2.active{
+
+.indicator2.active {
     background: #A3C4A8;
 }
-.indicator3.active{
+
+.indicator3.active {
     background: #B4A7F5;
 }
-.indicator4.active{
+
+.indicator4.active {
     background: #1c1c1e;
 }
-.indicator5.active{
+
+.indicator5.active {
     background: #2e1f3f;
 }
-.indicator6.active{
+
+.indicator6.active {
     background: #0b0c1a;
 }
-.indicator7.active{
+
+.indicator7.active {
     background: #0f2b3c;
 }
-.indicator10.active{
+
+.indicator10.active {
     background: #1f2733;
 }
-.indicator11.active{
+
+.indicator11.active {
     background: #7a1212;
 }
-.indicator12.active{
+
+.indicator12.active {
     background: #3b3f56;
 }
 
@@ -1347,4 +1356,8 @@ footer .wave#wave4 {
         width: 10px;
         height: 10px;
     }
+}
+
+.sescao-acessorios {
+    background-image: linear-gradient(to top, rgb(55, 65, 81), rgb(17, 24, 39), #121212);
 }
