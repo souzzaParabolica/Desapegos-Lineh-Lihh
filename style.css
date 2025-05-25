@@ -983,10 +983,10 @@ ul,
         top: 90% !important;
         transform: scale(0.7) rotate(15deg);
         z-index: 10; */
-        opacity:0 ;
+        opacity: 0;
     }
 
-    .titulo-acessorios{
+    .titulo-acessorios {
         margin-bottom: 0 !important;
     }
 
@@ -1213,5 +1213,138 @@ footer .wave#wave4 {
 
     100% {
         background-position-x: 1000px;
+    }
+}
+
+/* Estilos do carrossel - Versão Corrigida */
+.carrossel-container {
+    position: relative;
+    width: 100%;
+    max-width: 300px;
+    height: 300px;
+    /* Altura fixa para manter proporção */
+    margin: 0 auto;
+    /* Centraliza o carrossel */
+}
+
+.carrossel-track {
+    display: flex;
+    height: 100%;
+    width: 100%;
+}
+
+.carrossel-slide {
+    flex: 0 0 100%;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.carrossel-slide img {
+    max-height: 100%;
+    max-width: 100%;
+    object-fit: contain;
+    /* Mantém proporção sem cortar */
+    border-radius: 0.75rem;
+}
+
+.carrossel-prev,
+.carrossel-next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(255, 255, 255, 0.8);
+    border: none;
+    border-radius: 50%;
+    width: 32px;
+    height: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    z-index: 10;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.carrossel-prev {
+    left: 10px;
+}
+
+.carrossel-next {
+    right: 10px;
+}
+
+.carrossel-container:hover .carrossel-prev,
+.carrossel-container:hover .carrossel-next {
+    opacity: 1;
+}
+
+.carrossel-indicators {
+    position: absolute;
+    bottom: 10px;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+    z-index: 10;
+}
+
+.carrossel-indicator {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.5);
+    border: none;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.indicator1.active{
+    background: #E7A9B3;
+}
+.indicator2.active{
+    background: #A3C4A8;
+}
+.indicator3.active{
+    background: #B4A7F5;
+}
+.indicator4.active{
+    background: #1c1c1e;
+}
+.indicator5.active{
+    background: #2e1f3f;
+}
+.indicator6.active{
+    background: #0b0c1a;
+}
+.indicator7.active{
+    background: #0f2b3c;
+}
+.indicator10.active{
+    background: #1f2733;
+}
+.indicator11.active{
+    background: #7a1212;
+}
+.indicator12.active{
+    background: #3b3f56;
+}
+
+/* Mobile: botões sempre visíveis */
+@media (max-width: 768px) {
+
+    .carrossel-prev,
+    .carrossel-next {
+        opacity: 1;
+        background: rgba(255, 255, 255, 0.7);
+    }
+
+    .carrossel-indicator {
+        width: 10px;
+        height: 10px;
     }
 }

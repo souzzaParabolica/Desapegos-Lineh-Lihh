@@ -29,6 +29,7 @@
     <link rel="icon" href="img/Logo.png" />
     <script src="https://cdn.tailwindcss.com"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="carrossel.js"></script>
     <link rel="stylesheet" href="style.css" />
     <title>Desapegos Lineh Lihh</title>
   </head>
@@ -253,10 +254,83 @@
             src="img/Flat Cylinder L.png"
             alt=""
           />
+          <!-- Produto 1 -->
           <div
             class="produto prod1 bg-[#F1A7A7] flex flex-col p-5 rounded-xl gap-5 items-center"
           >
-            <img src="img/19.webp" alt="" />
+            <div
+              class="carrossel-container relative w-full max-w-[300px] h-[300px] overflow-hidden rounded-xl"
+            >
+              <div
+                class="carrossel-track flex h-full w-full transition-transform duration-300"
+              >
+                <div
+                  class="carrossel-slide flex-shrink-0 w-full h-full flex items-center justify-center"
+                >
+                  <img
+                    src="img/19.webp"
+                    alt="Possession Cósmica"
+                    class="max-h-full max-w-full object-contain rounded-xl"
+                  />
+                </div>
+                <div
+                  class="carrossel-slide flex-shrink-0 w-full h-full flex items-center justify-center"
+                >
+                  <img
+                    src="img/19-1.webp"
+                    alt="Possession Cósmica - Vista lateral"
+                    class="max-h-full max-w-full object-contain rounded-xl"
+                  />
+                </div>
+              </div>
+
+              <button
+                class="carrossel-prev absolute left-2 top-1/2 transform -translate-y-1/2 bg-white/80 rounded-full p-1 hover:bg-white"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <path d="M15 18l-6-6 6-6" />
+                </svg>
+              </button>
+              <button
+                class="carrossel-next absolute right-2 top-1/2 transform -translate-y-1/2 bg-white/80 rounded-full p-1 hover:bg-white"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <path d="M9 18l6-6-6-6" />
+                </svg>
+              </button>
+
+              <div
+                class="carrossel-indicators absolute bottom-2 left-0 right-0 flex justify-center gap-2"
+              >
+                <button
+                  class="carrossel-indicator indicator1 w-3 h-3 rounded-full bg-gray-300 hover:bg-gray-500"
+                ></button>
+                <button
+                  class="carrossel-indicator indicator1 w-3 h-3 rounded-full bg-gray-300 hover:bg-gray-500"
+                ></button>
+              </div>
+            </div>
+
             <p
               class="desc-produto nome max-w-[350px] cursor-default text-center"
             >
@@ -293,10 +367,84 @@
               </svg>
             </button>
           </div>
+
+          <!-- Produto 2 -->
           <div
-            class="produto prod2 bg-[#A3C4A8] flex flex-col p-5 rounded-xl gap-5"
+            class="produto prod2 bg-[#A3C4A8] flex flex-col p-5 rounded-xl gap-5 items-center"
           >
-            <img src="img/20.webp" alt="" />
+            <div
+              class="carrossel-container relative w-full max-w-[300px] h-[300px] overflow-hidden rounded-xl"
+            >
+              <div
+                class="carrossel-track flex h-full w-full transition-transform duration-300"
+              >
+                <div
+                  class="carrossel-slide flex-shrink-0 w-full h-full flex items-center justify-center"
+                >
+                  <img
+                    src="img/20.webp"
+                    alt="Geometric Rupture + Carla Colares"
+                    class="max-h-full max-w-full object-contain rounded-xl"
+                  />
+                </div>
+                <div
+                  class="carrossel-slide flex-shrink-0 w-full h-full flex items-center justify-center"
+                >
+                  <img
+                    src="img/20-1.webp"
+                    alt="Geometric Rupture - Vista lateral"
+                    class="max-h-full max-w-full object-contain rounded-xl"
+                  />
+                </div>
+              </div>
+
+              <button
+                class="carrossel-prev absolute left-2 top-1/2 transform -translate-y-1/2 bg-white/80 rounded-full p-1 hover:bg-white"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <path d="M15 18l-6-6 6-6" />
+                </svg>
+              </button>
+              <button
+                class="carrossel-next absolute right-2 top-1/2 transform -translate-y-1/2 bg-white/80 rounded-full p-1 hover:bg-white"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <path d="M9 18l6-6-6-6" />
+                </svg>
+              </button>
+
+              <div
+                class="carrossel-indicators absolute bottom-2 left-0 right-0 flex justify-center gap-2"
+              >
+                <button
+                  class="carrossel-indicator indicator2 w-3 h-3 rounded-full bg-gray-300 hover:bg-gray-500"
+                ></button>
+                <button
+                  class="carrossel-indicator indicator2 w-3 h-3 rounded-full bg-gray-300 hover:bg-gray-500"
+                ></button>
+              </div>
+            </div>
+
             <p
               class="desc-produto nome max-w-[300px] cursor-default text-center"
             >
@@ -305,7 +453,6 @@
               <br />
               Tam: 35
             </p>
-
             <p class="desc-produto text-2xl font-bold cursor-defalut">
               R$ 109,90
             </p>
@@ -333,10 +480,84 @@
               </svg>
             </button>
           </div>
+
+          <!-- Produto 3 -->
           <div
-            class="produto prod3 bg-[#B4A7F5] flex flex-col p-5 rounded-xl gap-5"
+            class="produto prod3 bg-[#B4A7F5] flex flex-col p-5 rounded-xl gap-5 items-center"
           >
-            <img src="img/21.webp" alt="" />
+            <div
+              class="carrossel-container relative w-full max-w-[300px] h-[300px] overflow-hidden rounded-xl"
+            >
+              <div
+                class="carrossel-track flex h-full w-full transition-transform duration-300"
+              >
+                <div
+                  class="carrossel-slide flex-shrink-0 w-full h-full flex items-center justify-center"
+                >
+                  <img
+                    src="img/21.webp"
+                    alt="Ophelia + Jason Wu"
+                    class="max-h-full max-w-full object-contain rounded-xl"
+                  />
+                </div>
+                <div
+                  class="carrossel-slide flex-shrink-0 w-full h-full flex items-center justify-center"
+                >
+                  <img
+                    src="img/21-1.webp"
+                    alt="Ophelia - Vista lateral"
+                    class="max-h-full max-w-full object-contain rounded-xl"
+                  />
+                </div>
+              </div>
+
+              <button
+                class="carrossel-prev absolute left-2 top-1/2 transform -translate-y-1/2 bg-white/80 rounded-full p-1 hover:bg-white"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <path d="M15 18l-6-6 6-6" />
+                </svg>
+              </button>
+              <button
+                class="carrossel-next absolute right-2 top-1/2 transform -translate-y-1/2 bg-white/80 rounded-full p-1 hover:bg-white"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <path d="M9 18l6-6-6-6" />
+                </svg>
+              </button>
+
+              <div
+                class="carrossel-indicators absolute bottom-2 left-0 right-0 flex justify-center gap-2"
+              >
+                <button
+                  class="carrossel-indicator indicator3 w-3 h-3 rounded-full bg-gray-300 hover:bg-gray-500"
+                ></button>
+                <button
+                  class="carrossel-indicator indicator3 w-3 h-3 rounded-full bg-gray-300 hover:bg-gray-500"
+                ></button>
+              </div>
+            </div>
+
             <p
               class="desc-produto nome max-w-[300px] cursor-default text-center"
             >
@@ -371,10 +592,84 @@
               </svg>
             </button>
           </div>
+
+          <!-- Produto 4 -->
           <div
-            class="produto prod4 bg-[#1c1c1e] flex flex-col p-5 rounded-xl gap-5"
+            class="produto prod4 bg-[#1c1c1e] flex flex-col p-5 rounded-xl gap-5 items-center"
           >
-            <img src="img/22.webp" alt="" />
+            <div
+              class="carrossel-container relative w-full max-w-[300px] h-[300px] overflow-hidden rounded-xl"
+            >
+              <div
+                class="carrossel-track flex h-full w-full transition-transform duration-300"
+              >
+                <div
+                  class="carrossel-slide flex-shrink-0 w-full h-full flex items-center justify-center"
+                >
+                  <img
+                    src="img/22.webp"
+                    alt="Court Shoes + Y Project"
+                    class="max-h-full max-w-full object-contain rounded-xl"
+                  />
+                </div>
+                <div
+                  class="carrossel-slide flex-shrink-0 w-full h-full flex items-center justify-center"
+                >
+                  <img
+                    src="img/22-1.webp"
+                    alt="Court Shoes - Vista lateral"
+                    class="max-h-full max-w-full object-contain rounded-xl"
+                  />
+                </div>
+              </div>
+
+              <button
+                class="carrossel-prev absolute left-2 top-1/2 transform -translate-y-1/2 bg-white/80 rounded-full p-1 hover:bg-white"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <path d="M15 18l-6-6 6-6" />
+                </svg>
+              </button>
+              <button
+                class="carrossel-next absolute right-2 top-1/2 transform -translate-y-1/2 bg-white/80 rounded-full p-1 hover:bg-white"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <path d="M9 18l6-6-6-6" />
+                </svg>
+              </button>
+
+              <div
+                class="carrossel-indicators absolute bottom-2 left-0 right-0 flex justify-center gap-2"
+              >
+                <button
+                  class="carrossel-indicator indicator4 indicator4 w-3 h-3 rounded-full bg-gray-300 hover:bg-gray-500"
+                ></button>
+                <button
+                  class="carrossel-indicator indicator4 indicator4 w-3 h-3 rounded-full bg-gray-300 hover:bg-gray-500"
+                ></button>
+              </div>
+            </div>
+
             <p class="text-white nome max-w-[300px] cursor-default text-center">
               Court Shoes + Y Project
               <br />
@@ -407,10 +702,84 @@
               </svg>
             </button>
           </div>
+
+          <!-- Produto 5 -->
           <div
-            class="produto prod5 bg-[#2e1f3f] flex flex-col p-5 rounded-xl gap-5"
+            class="produto prod5 bg-[#2e1f3f] flex flex-col p-5 rounded-xl gap-5 items-center"
           >
-            <img src="img/23.webp" alt="" />
+            <div
+              class="carrossel-container relative w-full max-w-[300px] h-[300px] overflow-hidden rounded-xl"
+            >
+              <div
+                class="carrossel-track flex h-full w-full transition-transform duration-300"
+              >
+                <div
+                  class="carrossel-slide flex-shrink-0 w-full h-full flex items-center justify-center"
+                >
+                  <img
+                    src="img/23.webp"
+                    alt="Possession Heel"
+                    class="max-h-full max-w-full object-contain rounded-xl"
+                  />
+                </div>
+                <div
+                  class="carrossel-slide flex-shrink-0 w-full h-full flex items-center justify-center"
+                >
+                  <img
+                    src="img/23-1.webp"
+                    alt="Possession Heel - Vista lateral"
+                    class="max-h-full max-w-full object-contain rounded-xl"
+                  />
+                </div>
+              </div>
+
+              <button
+                class="carrossel-prev absolute left-2 top-1/2 transform -translate-y-1/2 bg-white/80 rounded-full p-1 hover:bg-white"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <path d="M15 18l-6-6 6-6" />
+                </svg>
+              </button>
+              <button
+                class="carrossel-next absolute right-2 top-1/2 transform -translate-y-1/2 bg-white/80 rounded-full p-1 hover:bg-white"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <path d="M9 18l6-6-6-6" />
+                </svg>
+              </button>
+
+              <div
+                class="carrossel-indicators absolute bottom-2 left-0 right-0 flex justify-center gap-2"
+              >
+                <button
+                  class="carrossel-indicator indicator5 w-3 h-3 rounded-full bg-gray-300 hover:bg-gray-500"
+                ></button>
+                <button
+                  class="carrossel-indicator indicator5 w-3 h-3 rounded-full bg-gray-300 hover:bg-gray-500"
+                ></button>
+              </div>
+            </div>
+
             <p class="text-white nome max-w-[300px] cursor-default text-center">
               Possession Heel
               <br />
@@ -443,10 +812,84 @@
               </svg>
             </button>
           </div>
+
+          <!-- Produto 6 -->
           <div
-            class="produto prod6 bg-[#0b0c1a] flex flex-col p-5 rounded-xl gap-5"
+            class="produto prod6 bg-[#0b0c1a] flex flex-col p-5 rounded-xl gap-5 items-center"
           >
-            <img src="img/25.webp" alt="" />
+            <div
+              class="carrossel-container relative w-full max-w-[300px] h-[300px] overflow-hidden rounded-xl"
+            >
+              <div
+                class="carrossel-track flex h-full w-full transition-transform duration-300"
+              >
+                <div
+                  class="carrossel-slide flex-shrink-0 w-full h-full flex items-center justify-center"
+                >
+                  <img
+                    src="img/25.webp"
+                    alt="Ankle Boot + Vivienne Westwood"
+                    class="max-h-full max-w-full object-contain rounded-xl"
+                  />
+                </div>
+                <div
+                  class="carrossel-slide flex-shrink-0 w-full h-full flex items-center justify-center"
+                >
+                  <img
+                    src="img/25-1.webp"
+                    alt="Ankle Boot - Vista lateral"
+                    class="max-h-full max-w-full object-contain rounded-xl"
+                  />
+                </div>
+              </div>
+
+              <button
+                class="carrossel-prev absolute left-2 top-1/2 transform -translate-y-1/2 bg-white/80 rounded-full p-1 hover:bg-white"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <path d="M15 18l-6-6 6-6" />
+                </svg>
+              </button>
+              <button
+                class="carrossel-next absolute right-2 top-1/2 transform -translate-y-1/2 bg-white/80 rounded-full p-1 hover:bg-white"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <path d="M9 18l6-6-6-6" />
+                </svg>
+              </button>
+
+              <div
+                class="carrossel-indicators absolute bottom-2 left-0 right-0 flex justify-center gap-2"
+              >
+                <button
+                  class="carrossel-indicator indicator6 w-3 h-3 rounded-full bg-gray-300 hover:bg-gray-500"
+                ></button>
+                <button
+                  class="carrossel-indicator indicator6 w-3 h-3 rounded-full bg-gray-300 hover:bg-gray-500"
+                ></button>
+              </div>
+            </div>
+
             <p class="text-white nome max-w-[300px] cursor-default text-center">
               Ankle Boot + Vivienne Westwood
               <br />
@@ -477,10 +920,84 @@
               </svg>
             </button>
           </div>
+
+          <!-- Produto 7 -->
           <div
-            class="produto prod7 bg-[#0f2b3c] flex flex-col p-5 rounded-xl gap-5"
+            class="produto prod7 bg-[#0f2b3c] flex flex-col p-5 rounded-xl gap-5 items-center"
           >
-            <img src="img/27.webp" alt="" />
+            <div
+              class="carrossel-container relative w-full max-w-[300px] h-[300px] overflow-hidden rounded-xl"
+            >
+              <div
+                class="carrossel-track flex h-full w-full transition-transform duration-300"
+              >
+                <div
+                  class="carrossel-slide flex-shrink-0 w-full h-full flex items-center justify-center"
+                >
+                  <img
+                    src="img/27.webp"
+                    alt="Classic Sneaker Especial Hello Melissa"
+                    class="max-h-full max-w-full object-contain rounded-xl"
+                  />
+                </div>
+                <div
+                  class="carrossel-slide flex-shrink-0 w-full h-full flex items-center justify-center"
+                >
+                  <img
+                    src="img/27-1.webp"
+                    alt="Classic Sneaker - Vista lateral"
+                    class="max-h-full max-w-full object-contain rounded-xl"
+                  />
+                </div>
+              </div>
+
+              <button
+                class="carrossel-prev absolute left-2 top-1/2 transform -translate-y-1/2 bg-white/80 rounded-full p-1 hover:bg-white"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <path d="M15 18l-6-6 6-6" />
+                </svg>
+              </button>
+              <button
+                class="carrossel-next absolute right-2 top-1/2 transform -translate-y-1/2 bg-white/80 rounded-full p-1 hover:bg-white"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <path d="M9 18l6-6-6-6" />
+                </svg>
+              </button>
+
+              <div
+                class="carrossel-indicators absolute bottom-2 left-0 right-0 flex justify-center gap-2"
+              >
+                <button
+                  class="carrossel-indicator indicator7 w-3 h-3 rounded-full bg-gray-300 hover:bg-gray-500"
+                ></button>
+                <button
+                  class="carrossel-indicator indicator7 w-3 h-3 rounded-full bg-gray-300 hover:bg-gray-500"
+                ></button>
+              </div>
+            </div>
+
             <p class="text-white nome max-w-[300px] cursor-default text-center">
               Classic Sneaker Especial Hello Melissa
               <br />
@@ -589,13 +1106,85 @@
               </svg>
             </button>
           </div>
+
           <div
-            class="produto prod10 bg-[#1f2733] flex flex-col p-5 rounded-xl gap-5"
+            class="produto prod10 bg-[#1f2733] flex flex-col p-5 rounded-xl gap-5 items-center"
           >
-            <img src="img/30.webp" alt="" />
+            <div
+              class="carrossel-container relative w-full max-w-[300px] h-[300px] overflow-hidden rounded-xl"
+            >
+              <div
+                class="carrossel-track flex h-full w-full transition-transform duration-300"
+              >
+                <div
+                  class="carrossel-slide flex-shrink-0 w-full h-full flex items-center justify-center"
+                >
+                  <img
+                    src="img/30.webp"
+                    alt="Classic Sneaker Especial Hello Melissa"
+                    class="max-h-full max-w-full object-contain rounded-xl"
+                  />
+                </div>
+                <div
+                  class="carrossel-slide flex-shrink-0 w-full h-full flex items-center justify-center"
+                >
+                  <img
+                    src="img/30-1.webp"
+                    alt="Classic Sneaker - Vista lateral"
+                    class="max-h-full max-w-full object-contain rounded-xl"
+                  />
+                </div>
+              </div>
+
+              <button
+                class="carrossel-prev absolute left-2 top-1/2 transform -translate-y-1/2 bg-white/80 rounded-full p-1 hover:bg-white"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <path d="M15 18l-6-6 6-6" />
+                </svg>
+              </button>
+              <button
+                class="carrossel-next absolute right-2 top-1/2 transform -translate-y-1/2 bg-white/80 rounded-full p-1 hover:bg-white"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <path d="M9 18l6-6-6-6" />
+                </svg>
+              </button>
+
+              <div
+                class="carrossel-indicators absolute bottom-2 left-0 right-0 flex justify-center gap-2"
+              >
+                <button
+                  class="carrossel-indicator indicator10 w-3 h-3 rounded-full bg-gray-300 hover:bg-gray-500"
+                ></button>
+                <button
+                  class="carrossel-indicator indicator10 w-3 h-3 rounded-full bg-gray-300 hover:bg-gray-500"
+                ></button>
+              </div>
+            </div>
+
             <p class="text-white nome max-w-[300px] cursor-default text-center">
-              Dubrovka
-              <br />
+              Dubrovka <br />
               Tam: 35
             </p>
             <p class="text-white text-2xl font-bold cursor-defalut">R$ 99,90</p>
@@ -623,10 +1212,83 @@
               </svg>
             </button>
           </div>
+
           <div
-            class="produto prod11 bg-[#7a1212] flex flex-col p-5 rounded-xl gap-5"
+            class="produto prod11 bg-[#7a1212] flex flex-col p-5 rounded-xl gap-5 items-center"
           >
-            <img src="img/32.webp" alt="" />
+            <div
+              class="carrossel-container relative w-full max-w-[300px] h-[300px] overflow-hidden rounded-xl"
+            >
+              <div
+                class="carrossel-track flex h-full w-full transition-transform duration-300"
+              >
+                <div
+                  class="carrossel-slide flex-shrink-0 w-full h-full flex items-center justify-center"
+                >
+                  <img
+                    src="img/32.webp"
+                    alt="Classic Sneaker Especial Hello Melissa"
+                    class="max-h-full max-w-full object-contain rounded-xl"
+                  />
+                </div>
+                <div
+                  class="carrossel-slide flex-shrink-0 w-full h-full flex items-center justify-center"
+                >
+                  <img
+                    src="img/32-1.webp"
+                    alt="Classic Sneaker - Vista lateral"
+                    class="max-h-full max-w-full object-contain rounded-xl"
+                  />
+                </div>
+              </div>
+
+              <button
+                class="carrossel-prev absolute left-2 top-1/2 transform -translate-y-1/2 bg-white/80 rounded-full p-1 hover:bg-white"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <path d="M15 18l-6-6 6-6" />
+                </svg>
+              </button>
+              <button
+                class="carrossel-next absolute right-2 top-1/2 transform -translate-y-1/2 bg-white/80 rounded-full p-1 hover:bg-white"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <path d="M9 18l6-6-6-6" />
+                </svg>
+              </button>
+
+              <div
+                class="carrossel-indicators absolute bottom-2 left-0 right-0 flex justify-center gap-2"
+              >
+                <button
+                  class="carrossel-indicator indicator11 w-3 h-3 rounded-full bg-gray-300 hover:bg-gray-500"
+                ></button>
+                <button
+                  class="carrossel-indicator indicator11 w-3 h-3 rounded-full bg-gray-300 hover:bg-gray-500"
+                ></button>
+              </div>
+            </div>
+
             <p class="text-white nome max-w-[300px] cursor-default text-center">
               Ground
               <br />
@@ -658,9 +1320,81 @@
             </button>
           </div>
           <div
-            class="produto prod12 bg-[#3b3f56] flex flex-col p-5 rounded-xl gap-5"
+            class="produto prod12 bg-[#3b3f56] flex flex-col p-5 rounded-xl gap-5 items-center"
           >
-            <img src="img/33.webp" alt="" />
+            <div
+              class="carrossel-container relative w-full max-w-[300px] h-[300px] overflow-hidden rounded-xl"
+            >
+              <div
+                class="carrossel-track flex h-full w-full transition-transform duration-300"
+              >
+                <div
+                  class="carrossel-slide flex-shrink-0 w-full h-full flex items-center justify-center"
+                >
+                  <img
+                    src="img/33.webp"
+                    alt="Classic Sneaker Especial Hello Melissa"
+                    class="max-h-full max-w-full object-contain rounded-xl"
+                  />
+                </div>
+                <div
+                  class="carrossel-slide flex-shrink-0 w-full h-full flex items-center justify-center"
+                >
+                  <img
+                    src="img/33-1.webp"
+                    alt="Classic Sneaker - Vista lateral"
+                    class="max-h-full max-w-full object-contain rounded-xl"
+                  />
+                </div>
+              </div>
+
+              <button
+                class="carrossel-prev absolute left-2 top-1/2 transform -translate-y-1/2 bg-white/80 rounded-full p-1 hover:bg-white"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <path d="M15 18l-6-6 6-6" />
+                </svg>
+              </button>
+              <button
+                class="carrossel-next absolute right-2 top-1/2 transform -translate-y-1/2 bg-white/80 rounded-full p-1 hover:bg-white"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <path d="M9 18l6-6-6-6" />
+                </svg>
+              </button>
+
+              <div
+                class="carrossel-indicators absolute bottom-2 left-0 right-0 flex justify-center gap-2"
+              >
+                <button
+                  class="carrossel-indicator indicator12 w-3 h-3 rounded-full bg-gray-300 hover:bg-gray-500"
+                ></button>
+                <button
+                  class="carrossel-indicator indicator12 w-3 h-3 rounded-full bg-gray-300 hover:bg-gray-500"
+                ></button>
+              </div>
+            </div>
+
             <p class="text-white nome max-w-[300px] cursor-default text-center">
               Ground
               <br />
@@ -918,7 +1652,6 @@
           markers: false,
         },
       });
-
 
       // Animação do banner principal
       function setupBannerAnimations() {
