@@ -7,7 +7,7 @@
     --secondary-bg-color: #eaeaea;
     --menu-button-color: #000;
     --border-button: 1px solid #000;
-    --banner-color:linear-gradient(to top, #ffffff, rgb(80, 80, 80) 99%);
+    --banner-color: linear-gradient(to top, #ffffff, rgb(80, 80, 80) 99%);
 
 
 }
@@ -50,12 +50,13 @@ nav {
 ul,
 .titulo-desapegos,
 .titulo-acessorios,
-.desc-produto, .textbanner {
+.desc-produto,
+.textbanner {
     color: var(--text-color);
 }
 
 .titulo-acessorios,
-.titulo-desapegos{
+.titulo-desapegos {
     font-family: "Poppins", sans-serif;
     font-weight: 400;
     font-style: normal;
@@ -71,7 +72,7 @@ ul,
     cursor: default;
 }
 
-.textbanner{
+.textbanner {
     font-family: "Poppins", sans-serif;
     font-weight: 600;
     font-style: normal;
@@ -416,7 +417,8 @@ ul,
     border-radius: 0.75rem;
 }
 
-.produtos, .sescao-acessorios {
+.produtos,
+.sescao-acessorios {
     font-family: "Poppins", sans-serif;
     font-weight: 300;
     font-style: normal;
@@ -1365,3 +1367,50 @@ footer .wave#wave4 {
         height: 10px;
     }
 }
+/* Lightbox Styles - Pinterest Like */
+#lightbox-modal {
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.4s ease, visibility 0.4s ease;
+    display: flex !important;
+}
+
+#lightbox-modal.show {
+    opacity: 1;
+    visibility: visible;
+}
+
+#lightbox-image {
+    transition: transform 0.4s cubic-bezier(0.2, 0, 0.13, 1.5),
+        opacity 0.3s ease;
+    transform-origin: center center;
+}
+
+/* Botão de fechar estilizado */
+#lightbox-close {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    z-index: 100;
+    transition: all 0.2s ease;
+}
+
+#lightbox-close:hover {
+    background: rgba(0, 0, 0, 0.7);
+    transform: scale(1.1);
+}
+
+#lightbox-close svg {
+    width: 24px;
+    height: 24px;
+    stroke-width: 2; }

@@ -30,6 +30,24 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script src="carrossel.js"></script>
+    <script src="lightbox.js"></script>
+    <script>
+      const lightbox = document.getElementById('lightbox');
+      const lightboxImg = document.getElementById('lightbox-img');
+    
+      document.querySelectorAll('.carrossel-slide img').forEach(img => {
+        img.addEventListener('click', () => {
+          lightboxImg.src = img.src;
+          lightbox.classList.remove('hidden');
+        });
+      });
+    
+      lightbox.addEventListener('click', () => {
+        lightbox.classList.add('hidden');
+        lightboxImg.src = '';
+      });
+    </script>
+    
     <link rel="stylesheet" href="style.css" />
     <title>Desapegos Lineh Lihh</title>
   </head>
@@ -1541,8 +1559,6 @@
           width="100px"
         />
       </div>
-
-      
     </main>
 
     <footer>
@@ -1596,6 +1612,17 @@
         <li><a href="">Contato</a></li>
       </ul>
     </footer>
+    <!-- Lightbox Modal -->
+<div id="lightbox-modal" class="fixed inset-0 z-50 hidden items-center justify-center bg-black/90 p-4">
+  <div class="relative max-h-[90vh] max-w-[90vw]">
+    <button id="lightbox-close" class="absolute -right-2 -top-2 z-10 rounded-full bg-white p-2 shadow-lg hover:bg-gray-200">
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M18 6L6 18M6 6l12 12"/>
+      </svg>
+    </button>
+    <img id="lightbox-image" src="" alt="" class="max-h-[85vh] max-w-full object-contain">
+  </div>
+</div>
 
     <script>
       // Funções utilitárias
@@ -1645,7 +1672,8 @@
       }
 
       gsap.to(".sescao-acessorios", {
-        backgroundImage: "linear-gradient(to bottom, #121212, rgb(80, 80, 80) 99%",
+        backgroundImage:
+          "linear-gradient(to bottom, #121212, rgb(80, 80, 80) 99%",
         scrollTrigger: {
           trigger: ".banner",
           start: "top 90%",
@@ -2288,6 +2316,7 @@
       }
     </script>
     <script src="lembrete.js"></script>
+    
 
     <script src="script.js"></script>
   </body>
