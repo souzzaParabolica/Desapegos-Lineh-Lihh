@@ -2,12 +2,12 @@
 
 :root {
     --text-color: rgb(0, 0, 0);
-    --bg-color: rgb(255, 255, 255);
-    --hero-color: linear-gradient(to bottom, #eaeaea, white);
+    --bg-color: rgb(205, 205, 205);
+    --hero-color: linear-gradient(to bottom, #eaeaea, rgb(205, 205, 205));
     --secondary-bg-color: #eaeaea;
     --menu-button-color: #000;
     --border-button: 1px solid #000;
-    --banner-color: linear-gradient(to top, #ffffff, rgb(80, 80, 80) 99%);
+    --banner-color: linear-gradient(to top, rgb(205, 205, 205), rgb(80, 80, 80) 99%);
 
 
 }
@@ -60,6 +60,13 @@ ul,
     font-family: "Poppins", sans-serif;
     font-weight: 400;
     font-style: normal;
+}
+
+.titulo-acessorios{
+    background-color: #959595;
+    padding-inline:24px ;
+    padding-block: 16px;
+    border-radius: 0.75rem;
 }
 
 .lembrete {
@@ -680,14 +687,10 @@ ul,
 
 .banner {
     background-image: var(--banner-color);
-    background-repeat: no-repeat;
-    background-size: cover;
     width: 100%;
     height: 100vh;
     display: flex;
-    flex-direction: column;
     align-items: center;
-    justify-content: center;
     padding: 20px;
     position: relative;
     overflow: hidden;
@@ -696,7 +699,6 @@ ul,
 
 .banner img:first-child {
     max-width: 200px;
-    margin-bottom: 30px;
 }
 
 .banner p {
@@ -888,114 +890,7 @@ ul,
 .button-acess1:hover {
     background-color: #c0723a;
 }
-
-.mola {
-    transform: rotate(15deg);
-}
-
-.mola2 {
-    transform: rotate(15deg);
-}
-
-.esferas1 {
-    transform: rotate(45deg);
-    z-index: 11;
-}
-
-.esferas2 {
-    transform: rotate(-42deg);
-}
-
-.mola,
-.mola2,
-.esferas1,
-.esferas2 {
-    opacity: 1;
-}
-
-.rosca,
-.rosca2,
-.pill,
-.pillR,
-.pillA,
-.cilindroA,
-.cilindroR,
-.cilindroL,
-.flatA,
-.flatV,
-.flatL {
-    width: 40% !important;
-}
-
-.rosca,
-.rosca2,
-.circulo-plano,
-.flatA,
-.flatV,
-.flatL {
-    opacity: 0;
-}
-
-.pill,
-.pillR,
-.pillA {
-    transform: rotate(-30deg);
-    opacity: 0;
-}
-
-.cilindroA,
-.cilindroR,
-.cilindroL {
-    transform: rotate(60deg);
-    opacity: 0;
-}
-
-.circulo-plano {
-    width: 40% !important;
-}
-
 @media (max-width: 767px) {
-
-    .mola,
-    .mola2 {
-        width: 150px !important;
-        height: 150px !important;
-    }
-
-    .esferas1,
-    .esferas2 {
-        width: 220px !important;
-        height: 220px !important;
-    }
-
-    /* Posicionamento diferente para mobile */
-    .mola {
-        /* left: -80px !important;
-        top: 10% !important;
-        transform: rotate(15deg) scale(0.8);
-        z-index: 11; */
-        opacity: 0;
-    }
-
-    .mola2 {
-        opacity: 0;
-    }
-
-    .esferas1 {
-        /* left: -35% !important;
-        top: 63% !important;
-        transform: scale(0.7) rotate(-30deg); */
-        opacity: 0;
-    }
-
-    .esferas2 {
-        /* left: 40% !important;
-        top: 90% !important;
-        transform: scale(0.7) rotate(15deg);
-        z-index: 10; */
-        opacity: 0;
-    }
-
     .titulo-acessorios {
         margin-bottom: 0 !important;
     }
@@ -1021,96 +916,21 @@ ul,
         transform: scale(1.3);
     }
 
-    .rosca,
-    .rosca2,
-    .circulo-plano,
-    .pill,
-    .pillR,
-    .pillA,
-    .cilindroA,
-    .cilindroR,
-    .cilindroL,
-    .flatA,
-    .flatV,
-    .flatL {
-        opacity: 0.7;
-    }
-
-    .rosca {
-        width: 80% !important;
-        top: -1% !important;
-        left: 1% !important;
-    }
-
-    .rosca2 {
-        width: 80% !important;
-        top: 8% !important;
-    }
-
-    .circulo-plano {
-        width: 80% !important;
-        top: 16.5% !important;
-        left: 5% !important;
-    }
-
-    .pill {
-        width: 80% !important;
-        top: 24.5% !important;
-        left: 0% !important;
-    }
-
-    .pillR {
-        width: 80% !important;
-        top: 33.2% !important;
-        left: 25% !important;
-    }
-
-    .pillA {
-        width: 80% !important;
-        top: 41.3% !important;
-        left: 0% !important;
-    }
-
-    .cilindroA {
-        width: 80% !important;
-        top: 50% !important;
-        left: 25% !important;
-    }
-
-    .cilindroR {
-        width: 80% !important;
-        top: 58.2% !important;
-        left: 0% !important;
-    }
-
-    .cilindroL {
-        width: 80% !important;
-        top: 66.7% !important;
-        left: 25% !important;
-    }
-
-    .flatA {
-        width: 80% !important;
-        top: 75% !important;
-        left: 0% !important;
-    }
-
-    .flatV {
-        width: 80% !important;
-        top: 83.2% !important;
-        left: 25% !important;
-    }
-
-    .flatL {
-        width: 80% !important;
-        top: 91.5% !important;
-        left: 0% !important;
-    }
-
     .lembrete {
         font-size: 25px !important;
         width: 85% !important;
     }
+
+    .banner{
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+
+        .textbanner{
+            margin-top: 5rem;
+        }
+    }
+ 
 }
 
 footer {
