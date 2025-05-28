@@ -1227,3 +1227,20 @@ footer .wave#wave4 {
     border-bottom-left-radius: 20px;
     border-top-right-radius: 20px;
 }
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: #323232;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #E7A9B3; 
+    border-radius: 50px;
+}
+
+::selection {
+    background: #E7A9B3;
+    color: white; }
