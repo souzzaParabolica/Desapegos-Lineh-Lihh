@@ -44,7 +44,7 @@ nav {
 }
 
 .produtos .produto {
-    height: 752px !important;
+    /* height: 752px !important; */
 }
 
 ul,
@@ -62,9 +62,9 @@ ul,
     font-style: normal;
 }
 
-.titulo-acessorios{
+.titulo-acessorios {
     background-color: #959595;
-    padding-inline:24px ;
+    padding-inline: 24px;
     padding-block: 16px;
     border-radius: 0.75rem;
 }
@@ -420,7 +420,6 @@ ul,
 }
 
 .produtos img {
-    width: 300px;
     border-radius: 0.75rem;
 }
 
@@ -434,6 +433,12 @@ ul,
 .produtos {
     overflow: hidden;
     /* Garante que nada vaze durante a animação */
+}
+
+.produto {
+    height: 625px !important;
+    /* height: 95vh !important; */
+    width: 340px;
 }
 
 .produto {
@@ -754,37 +759,11 @@ ul,
 
     .banner p {
         font-size: 30px;
-        max-width: 300px;
+        max-width: 400px;
     }
 
     .banner img:first-child {
         max-width: none;
-    }
-
-    .esferas,
-    .cubo,
-    .pilula,
-    .cilindro {
-        width: 200px !important;
-    }
-
-    /* Posicionamento desktop (original) */
-    .esferas {
-        right: 7px;
-        top: -13%;
-        left: auto;
-    }
-
-    .cubo {
-        right: 15%;
-        top: 18%;
-        left: auto;
-    }
-
-    /* Volta à posição original */
-    .pilula {
-        right: -20px;
-        left: auto;
     }
 
 
@@ -890,6 +869,7 @@ ul,
 .button-acess1:hover {
     background-color: #c0723a;
 }
+
 @media (max-width: 767px) {
     .titulo-acessorios {
         margin-bottom: 0 !important;
@@ -904,7 +884,11 @@ ul,
     }
 
     .produto {
-        transform: scale(0.8);
+        width: 90%;
+    }
+
+    .produtos img {
+        width: auto;
     }
 
     .acessorio {
@@ -921,16 +905,17 @@ ul,
         width: 85% !important;
     }
 
-    .banner{
+    .banner {
         flex-direction: column;
         align-items: center;
         text-align: center;
+        justify-content: center;
 
-        .textbanner{
+        .textbanner {
             margin-top: 5rem;
         }
     }
- 
+
 }
 
 footer {
@@ -1100,11 +1085,11 @@ footer .wave#wave4 {
 }
 
 .carrossel-prev {
-    left: 10px;
+    left: 0px !important;
 }
 
 .carrossel-next {
-    right: 10px;
+    right: 0px !important;
 }
 
 .carrossel-container:hover .carrossel-prev,
@@ -1115,8 +1100,8 @@ footer .wave#wave4 {
 .carrossel-indicators {
     position: absolute;
     bottom: 10px;
-    left: 0;
-    right: 0;
+    left: 0px;
+    right: 0px;
     display: flex;
     justify-content: center;
     gap: 8px;
@@ -1182,11 +1167,13 @@ footer .wave#wave4 {
         background: rgba(255, 255, 255, 0.7);
     }
 
+
     .carrossel-indicator {
         width: 10px;
         height: 10px;
     }
 }
+
 /* Lightbox Styles - Pinterest Like */
 #lightbox-modal {
     opacity: 0;
@@ -1233,4 +1220,10 @@ footer .wave#wave4 {
 #lightbox-close svg {
     width: 24px;
     height: 24px;
-    stroke-width: 2; }
+    stroke-width: 2;
+}
+
+.span-melissa, .span-2010{
+    border-bottom-left-radius: 20px;
+    border-top-right-radius: 20px;
+}

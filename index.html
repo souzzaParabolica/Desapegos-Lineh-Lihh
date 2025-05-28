@@ -65,23 +65,11 @@
           />
 
           <!-- Botão do menu hamburguer (visível apenas em mobile) -->
-          <button
-            class="menu-button md:hidden focus:outline-none"
-            onclick="toggleMenu()"
-          >
-            <svg
-              class="w-6 h-6"
-              fill="none"
-              stroke="currentColor"
-              viewBox="0 0 24 24"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2"
-                d="M4 6h16M4 12h16M4 18h16"
-              ></path>
+          <button class="menu-button md:hidden focus:outline-none" onclick="toggleMenu()">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path class="line" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16"></path>
+              <path class="line" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 12h16"></path>
+              <path class="line" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 18h16"></path>
             </svg>
           </button>
         </div>
@@ -210,7 +198,7 @@
         </h2>
 
         <div
-          class="produtos mt-[30px] flex flex-row justify-around items-center flex-wrap px-4 w-screen relative"
+          class="produtos mt-[30px] flex flex-row justify-around items-center flex-wrap px-4 w-screen"
         >
           <!-- Produto 1 -->
           <div
@@ -297,7 +285,7 @@
               Tam: 35
             </p>
             <p
-              class="text-white bg-transparent text-2xl font-bold cursor-default"
+              class="price text-white bg-transparent text-2xl font-bold cursor-default"
             >
               R$ 59,90
             </p>
@@ -411,7 +399,7 @@
               <br />
               Tam: 35
             </p>
-            <p class="text-white text-2xl font-bold cursor-defalut">
+            <p class="price text-white text-2xl font-bold cursor-defalut">
               R$ 109,90
             </p>
 
@@ -523,7 +511,7 @@
               <br />
               Tam: 35
             </p>
-            <p class="text-white text-2xl font-bold cursor-defalut">
+            <p class="price text-white text-2xl font-bold cursor-defalut">
               R$ 119,90
             </p>
 
@@ -633,7 +621,7 @@
               <br />
               Tam: 35
             </p>
-            <p class="text-white text-2xl font-bold cursor-defalut">
+            <p class="price text-white text-2xl font-bold cursor-defalut">
               R$ 199,90
             </p>
 
@@ -743,7 +731,7 @@
               <br />
               Tam: 35
             </p>
-            <p class="text-white text-2xl font-bold cursor-defalut">
+            <p class="price text-white text-2xl font-bold cursor-defalut">
               R$ 109,90
             </p>
 
@@ -853,7 +841,7 @@
               <br />
               Tam: 35
             </p>
-            <p class="text-white text-2xl font-bold cursor-defalut">R$ 79,90</p>
+            <p class="price text-white text-2xl font-bold cursor-defalut">R$ 79,90</p>
 
             <button class="button-prod6">
               <span>Compre já</span>
@@ -961,7 +949,7 @@
               <br />
               Tam: 35
             </p>
-            <p class="text-white text-2xl font-bold cursor-defalut">
+            <p class="price text-white text-2xl font-bold cursor-defalut">
               R$ 159,90
             </p>
 
@@ -1061,7 +1049,7 @@
               Tam: 35
             </p>
             <p
-              class="text-white bg-transparent text-2xl font-bold cursor-default"
+              class="price text-white bg-transparent text-2xl font-bold cursor-default"
             >
               R$ 159,90
             </p>
@@ -1163,7 +1151,7 @@
               Tam: 17
             </p>
             <p
-              class="text-white bg-transparent text-2xl font-bold cursor-default"
+              class="price text-white bg-transparent text-2xl font-bold cursor-default"
             >
               R$ 49,90
             </p>
@@ -1272,7 +1260,7 @@
               Dubrovka <br />
               Tam: 35
             </p>
-            <p class="text-white text-2xl font-bold cursor-defalut">R$ 99,90</p>
+            <p class="price text-white text-2xl font-bold cursor-defalut">R$ 99,90</p>
 
             <button class="button-prod10">
               <span>Compre já</span>
@@ -1379,7 +1367,7 @@
               <br />
               Tam: 35
             </p>
-            <p class="text-white text-2xl font-bold cursor-defalut">R$ 69,90</p>
+            <p class="price text-white text-2xl font-bold cursor-defalut">R$ 69,90</p>
 
             <button class="button-prod11">
               <span>Compre já</span>
@@ -1485,7 +1473,7 @@
               <br />
               Tam: 35
             </p>
-            <p class="text-white text-2xl font-bold cursor-defalut">R$ 79,90</p>
+            <p class="price text-white text-2xl font-bold cursor-defalut">R$ 79,90</p>
 
             <button class="button-prod12">
               <span>Compre já</span>
@@ -1536,7 +1524,7 @@
             <h3 class="text-xl md:text-2xl text-black cursor-default">
               Bolsa Melissa - Origem
             </h3>
-            <p class="text-xl md:text-2xl text-black font-bold cursor-default">
+            <p class="price text-xl md:text-2xl text-black font-bold cursor-default">
               R$ 499,90
             </p>
 
@@ -1576,8 +1564,8 @@
         />
         <p class="textbanner text-[50px]">
           Colecionadora e amante da marca
-          <span class="bg-red-300"> Melissa </span> desde
-          <span class="bg-yellow-300 rounded-xl"> 2010!</span>
+          <span class="span-melissa bg-red-300 px-2"> Melissa</span> desde
+          <span class="span-2010 bg-yellow-300 px-2">2010!</span>
         </p>
       </div>
     </main>
@@ -1763,30 +1751,6 @@
           markers: false, // Desative depois de testar
         },
       });
-
-      // gsap.from(".logo-desapegos",{
-      //   opacity:0,
-      //   y: 10,
-      //   scrollTrigger: {
-      //     trigger: ".banner",
-      //     start: "top 60%",
-      //     end: "top 25%",
-      //     scrub: 1.5,
-      //     markers: false,
-      //   },
-      // })
-
-      // gsap.from(".textbanner",{
-      //   opacity:0,
-      //   y: 10,
-      //   scrollTrigger: {
-      //     trigger: ".textbanner",
-      //     start: "top 80%",
-      //     end: "top 55%",
-      //     scrub: 1.5,
-      //     markers: false,
-      //   },
-      // })
 
       gsap.from(".logo-desapegos, .textbanner", {
         opacity: 0,
