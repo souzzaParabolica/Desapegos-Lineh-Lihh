@@ -52,7 +52,7 @@
     <link rel="stylesheet" href="style.css" />
     <title>Desapegos Lineh Lihh</title>
   </head>
-  <body>
+  <body class="font-[poppins]">
     <header class="">
       <nav
         class="flex flex-col md:flex-row justify-between flex-wrap rounded-xl items-center m-4 px-4"
@@ -66,11 +66,37 @@
           />
 
           <!-- Botão do menu hamburguer (visível apenas em mobile) -->
-          <button class="menu-button md:hidden focus:outline-none" onclick="toggleMenu()">
-            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path class="line" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16"></path>
-              <path class="line" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 12h16"></path>
-              <path class="line" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 18h16"></path>
+          <button
+            class="menu-button md:hidden focus:outline-none"
+            onclick="toggleMenu()"
+          >
+            <svg
+              class="w-6 h-6"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                class="line"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M4 6h16"
+              ></path>
+              <path
+                class="line"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M4 12h16"
+              ></path>
+              <path
+                class="line"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M4 18h16"
+              ></path>
             </svg>
           </button>
         </div>
@@ -278,9 +304,7 @@
               </div>
             </div>
 
-            <p
-              class="text-white nome max-w-[350px] cursor-default text-center"
-            >
+            <p class="text-white nome max-w-[350px] cursor-default text-center">
               Possession Cósmica
               <br />
               Tam: 35
@@ -392,9 +416,7 @@
               </div>
             </div>
 
-            <p
-              class="text-white nome max-w-[300px] cursor-default text-center"
-            >
+            <p class="text-white nome max-w-[300px] cursor-default text-center">
               Geometric Rupture <br />
               + Carla Colares
               <br />
@@ -505,9 +527,7 @@
               </div>
             </div>
 
-            <p
-              class="text-white nome max-w-[300px] cursor-default text-center"
-            >
+            <p class="text-white nome max-w-[300px] cursor-default text-center">
               Ophelia + Jason Wu
               <br />
               Tam: 35
@@ -842,7 +862,9 @@
               <br />
               Tam: 35
             </p>
-            <p class="price text-white text-2xl font-bold cursor-defalut">R$ 79,90</p>
+            <p class="price text-white text-2xl font-bold cursor-defalut">
+              R$ 79,90
+            </p>
 
             <button class="button-prod6">
               <span>Compre já</span>
@@ -1041,9 +1063,7 @@
               </div>
             </div>
 
-            <p
-              class="text-white nome max-w-[350px] cursor-default text-center"
-            >
+            <p class="text-white nome max-w-[350px] cursor-default text-center">
               Wide Papete <br />
               Especial Hello Melissa
               <br />
@@ -1143,9 +1163,7 @@
               </div>
             </div>
 
-            <p
-              class="text-white nome max-w-[350px] cursor-default text-center"
-            >
+            <p class="text-white nome max-w-[350px] cursor-default text-center">
               Mini Melissa <br />
               Alpha Play
               <br />
@@ -1261,7 +1279,9 @@
               Dubrovka <br />
               Tam: 35
             </p>
-            <p class="price text-white text-2xl font-bold cursor-defalut">R$ 99,90</p>
+            <p class="price text-white text-2xl font-bold cursor-defalut">
+              R$ 99,90
+            </p>
 
             <button class="button-prod10">
               <span>Compre já</span>
@@ -1368,7 +1388,9 @@
               <br />
               Tam: 35
             </p>
-            <p class="price text-white text-2xl font-bold cursor-defalut">R$ 69,90</p>
+            <p class="price text-white text-2xl font-bold cursor-defalut">
+              R$ 69,90
+            </p>
 
             <button class="button-prod11">
               <span>Compre já</span>
@@ -1474,7 +1496,9 @@
               <br />
               Tam: 35
             </p>
-            <p class="price text-white text-2xl font-bold cursor-defalut">R$ 79,90</p>
+            <p class="price text-white text-2xl font-bold cursor-defalut">
+              R$ 79,90
+            </p>
 
             <button class="button-prod12">
               <span>Compre já</span>
@@ -1502,57 +1526,80 @@
         </div>
       </section>
 
-      <section
-        id="seção-acessorios"
-        class="sescao-acessorios flex flex-col justify-center items-center h-[100vh] w-[100vw] gap-10 mt-[100px] pb-[100px]"
-      >
-        <h2 class="titulo-acessorios text-3xl desc-produto">Acessórios</h2>
-
-        <div
-          class="acessorio w-[80%] md:w-[80%] lg:w-[60%] xl:w-[50%] flex flex-col md:flex-row justify-center gap-5 md:gap-10 items-center bg-[#f4e9dd] p-5 rounded-xl mx-auto"
+      <section id="secao-acessorios" class="secao-acessorios py-20">
+        <div class="container mx-auto px-4 flex flex-col gap-10 xl:gap-0 2xl:gap-0">
+          <!-- Título com efeito especial -->
+          <h2
+          class="titulo-acessorios mb-16 cursor-default font-bold text-[30px] px-4 mt-20"
         >
-          <!-- Imagem: Redimensiona e centraliza em telas pequenas -->
-          <img
-            src="img/26.webp"
-            alt="Bolsa Melissa - Origem"
-            class="w-[200px] md:w-[250px] lg:w-[300px] h-auto lightbox-trigger"
-          />
+           <span class="bg-[#E7A9B3] p-1"> Acessórios:</span>
+        </h2>
 
-          <!-- Conteúdo: Alinhamento e espaçamento responsivo -->
+          <!-- Card do produto -->
           <div
-            class="content flex flex-col items-center gap-3 md:gap-5 text-center"
+            class="acessorio max-w-4xl mx-auto bg-[#1e293b] rounded-2xl overflow-hidden shadow-2xl border border-[#1e293b]"
           >
-            <h3 class="text-xl md:text-2xl text-black cursor-default">
-              Bolsa Melissa - Origem
-            </h3>
-            <p class="price text-xl md:text-2xl text-black font-bold cursor-default">
-              R$ 499,90
-            </p>
+            <div class="flex flex-col md:flex-row">
+              <!-- Imagem com efeito de zoom -->
+              <div class="md:w-1/2 overflow-hidden relative group">
+                <img
+                  src="img/26.webp"
+                  alt="Bolsa Melissa - Origem"
+                  class="w-full rounded-xl h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                />
+                <div
+                  class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-10 transition-all duration-300"
+                ></div>
+              </div>
 
-            <!-- Botão: Tamanho e hover responsivos -->
-            <button
-              class="button-acess1 flex items-center gap-2 hover:gap-3 transition-all duration-300"
-            >
-              <span>Compre já</span>
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                fill="none"
-                viewBox="0 0 74 74"
-                class="h-6 w-6 md:h-8 md:w-8"
-              >
-                <circle
-                  stroke-width="3"
-                  stroke="black"
-                  r="35.5"
-                  cy="37"
-                  cx="37"
-                ></circle>
-                <path
-                  fill="black"
-                  d="M25 35.5C24.1716 35.5 23.5 36.1716 23.5 37C23.5 37.8284 24.1716 38.5 25 38.5V35.5ZM49.0607 38.0607C49.6464 37.4749 49.6464 36.5251 49.0607 35.9393L39.5147 26.3934C38.9289 25.8076 37.9792 25.8076 37.3934 26.3934C36.8076 26.9792 36.8076 27.9289 37.3934 28.5147L45.8787 37L37.3934 45.4853C36.8076 46.0711 36.8076 47.0208 37.3934 47.6066C37.9792 48.1924 38.9289 48.1924 39.5147 47.6066L49.0607 38.0607ZM25 38.5L48 38.5V35.5L25 35.5V38.5Z"
-                ></path>
-              </svg>
-            </button>
+              <!-- Conteúdo -->
+              <div class="md:w-1/2 p-8 flex flex-col justify-center">
+                <h3 class="text-2xl md:text-3xl font-bold text-gray-100 mb-4">
+                  Bolsa Melissa - Origem
+                </h3>
+
+                <div class="flex items-center mb-6">
+                  <span class="text-xl line-through text-gray-400 mr-3"
+                    >R$ 599,90</span
+                  >
+                  <span class="text-2xl font-bold text-[#d4a373]"
+                    >R$ 499,90</span
+                  >
+                  <span
+                    class="ml-3 bg-[#d4a373] text-white text-xs font-bold px-2 py-1 rounded"
+                    >-16%</span
+                  >
+                </div>
+
+                <p class="text-gray-600 mb-8">
+                  Bolsa em material sustentável com design moderno e alças
+                  ajustáveis. Perfeita para o dia a dia.
+                </p>
+
+                <!-- Botão com efeito hover -->
+                <button
+                  class="relative overflow-hidden group w-full md:w-auto self-center"
+                >
+                  <div
+                    class="bg-black text-white px-8 py-4 rounded-full font-medium flex items-center justify-center gap-2 transition-all duration-300 group-hover:bg-[#d4a373]"
+                  >
+                    <span>Compre já</span>
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      viewBox="0 0 24 24"
+                      fill="currentColor"
+                      class="w-5 h-5 transition-transform duration-300 group-hover:translate-x-1"
+                    >
+                      <path
+                        fill-rule="evenodd"
+                        d="M12.97 3.97a.75.75 0 011.06 0l7.5 7.5a.75.75 0 010 1.06l-7.5 7.5a.75.75 0 11-1.06-1.06l6.22-6.22H3a.75.75 0 010-1.5h16.19l-6.22-6.22a.75.75 0 010-1.06z"
+                        clip-rule="evenodd"
+                      />
+                    </svg>
+                  </div>
+                </button>
+              </div>
+            </div>
           </div>
         </div>
       </section>
@@ -1702,61 +1749,34 @@
         });
       }
 
-      gsap.to(".sescao-acessorios", {
-        backgroundImage:
-          "linear-gradient(to bottom, #121212, rgb(80, 80, 80) 99%",
-        scrollTrigger: {
-          trigger: ".banner",
-          start: "top 90%",
-          end: "top 60%",
-          scrub: 2,
-          markers: false,
-        },
-      });
-
-      gsap.to(".acessorio", {
+      gsap.from(".titulo-acessorios",{
         opacity: 0,
+        y: 20,
         scrollTrigger: {
-          trigger: ".banner",
-          start: "top 90%",
-          end: "top 30%",
-          scrub:1.5,
-          markers: false,
-        },
-      });
-
-      gsap.from(".titulo-acessorios", {
-        opacity: 0,
-        y: 30,
-        scrollTrigger: {
-          trigger: ".sescao-acessorios",
-          start: "top 90%",
-          end: "top 85%",
-          scrub: 1.2,
-          markers: false,
-        },
-      });
-
-      // Verifica se é um dispositivo móvel (opcional, você pode usar CSS media queries também)
-      gsap.from(".acessorio", {
-        opacity: 0,
-        y: 30,
-        transform: "scale(0.9)",
-        duration: 1,
-        ease: "power2.out",
-        scrollTrigger: {
-          trigger: ".sescao-acessorios", // Ou ".acessorio" se preferir
+          trigger: ".secao-acessorios",
           start: "top 80%",
           end: "top 50%",
-          scrub: 1.2, // Remove se quiser uma animação mais direta
-          markers: false, // Desative depois de testar
+          scrub: 1.5,
+          markers: false,
         },
-      });
+      })
+
+      gsap.from(".acessorio",{
+        opacity: 0,
+        y: 20,
+        scrollTrigger: {
+          trigger: ".secao-acessorios",
+          start: "top 50%",
+          end: "top 30%",
+          scrub: 1.5,
+          markers: false,
+        },
+      })
 
       gsap.from(".logo-desapegos, .textbanner", {
         opacity: 0,
         y: 20,
-        stagger:.6,
+        stagger: 0.6,
         scrollTrigger: {
           trigger: ".banner",
           start: "top 70%",
@@ -1766,7 +1786,7 @@
         },
       });
 
-      gsap.from("footer",{
+      gsap.from("footer", {
         opacity: 0,
         scrollTrigger: {
           trigger: "footer",
@@ -1775,7 +1795,7 @@
           scrub: 1.5,
           markers: false,
         },
-      })
+      });
 
       // Animação do banner principal
       function setupBannerAnimations() {}

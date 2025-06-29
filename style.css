@@ -51,20 +51,6 @@ ul,
     color: var(--text-color);
 }
 
-.titulo-acessorios,
-.titulo-desapegos {
-    font-family: "Poppins", sans-serif;
-    font-weight: 400;
-    font-style: normal;
-}
-
-.titulo-acessorios {
-    background-color: #959595;
-    padding-inline: 24px;
-    padding-block: 16px;
-    border-radius: 0.75rem;
-}
-
 .lembrete {
     font-family: "Poppins", sans-serif;
     font-weight: 800;
@@ -417,13 +403,6 @@ ul,
 
 .produtos img {
     border-radius: 0.75rem;
-}
-
-.produtos,
-.sescao-acessorios {
-    font-family: "Poppins", sans-serif;
-    font-weight: 300;
-    font-style: normal;
 }
 
 .produtos {
@@ -880,7 +859,7 @@ ul,
     }
 
     .produto {
-        width: 90%;
+        width: 80%;
     }
 
     .produtos img {
